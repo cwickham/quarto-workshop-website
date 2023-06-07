@@ -1,18 +1,16 @@
 ---
 title: "Hello Quarto"
-subtitle: "ASA Traveling Course: From R Markdown to Quarto"
-institute: "Duke University + Posit"
-author: "Dr. Mine Çetinkaya-Rundel"
-date: "2023-04-28"
-footer: "[🔗 mine.quarto.pub/quarto-asa-nebraska](https://mine.quarto.pub/quarto-asa-nebraska)"
+subtitle: "Dynamic Documents: Quarto for R, Julia, and Python"
+institute: "RT2 UC Berkeley "
+author: "Andrew Bray"
+# footer: "[🔗 mine.quarto.pub/quarto-asa-nebraska](https://mine.quarto.pub/quarto-asa-nebraska)"
 logo: "../images/logo.png"
 format:
   revealjs:
     theme: ../style/slides.scss
     transition: fade
     slide-number: true
-    chalkboard: true
-editor: visual
+    chalkboard: false
 execute:
   freeze: auto
   echo: true
@@ -29,114 +27,56 @@ options(width = 65)
 library(countdown)
 ```
 
-# Pre-workshop instructions
+## 
 
-## While you wait for the workshop to begin... {.smaller}
+While you wait for the workshop to begin, be sure you've got all the tools needed for the workshop:
 
--   Download and install the latest versions of R, RStudio, and Quarto:
+\
 
-    -   R: <https://cran.r-project.org>
-    -   RStudio: <https://posit.co/download/rstudio-desktop>
-    -   Quarto: <https://quarto.org/docs/get-started>
-
--   Install the following packages:
-
-```{r}
-#| label: pkg-list
-#| eval: false
-
-pkg_list <- c("tidyverse", "gt", "ggthemes", "palmerpenguins", "quarto", "here")
-install.packages(pkg_list)
-```
-
--   Download `exercises.zip` at <https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio \> File \> New Project \> Existing Directory and navigate to the unzipped `exercises` folder and create an RStudio project in there and open it.
-
-# Welcome
-
-## Logistics {.smaller}
-
--   WiFi: MedCenter Guest or eduroam
-
--   Sli.do:
-
-    -   Anonymous questions to go through at the end of a module / at the end of the day
-    -   Use for not time pressing questions / things you're curious about beyond what we're explicitly covering
-    -   Got to [https://slido.com](https://slido.com/) and use code: `#quarto`
-    -   Or use this direct link <https://app.sli.do/event/wkQ3fmnKafwzDNKQNXK7FF>
-
--   Exits in the front of the room
-
--   For restrooms, leave on the right (my right) of the room
-
-## Code of Conduct {.smaller}
-
-> The American Statistical Association (ASA) is committed to providing an atmosphere in which personal respect and intellectual growth are valued and the free expression and exchange of ideas are encouraged. Consistent with this commitment, it is the policy of the ASA that all participants in ASA activities enjoy a welcoming environment free from unlawful discrimination, harassment, and retaliation. We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to, members of any race, ethnicity, culture, national origin, color, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
-
-::: aside
-[ASA Code of Conduct](https://www.amstat.org/meetings/code-of-conduct)
+::: {style="font-size: 1.2em"}
+<https://andrew.quarto.pub/rt2-quarto/pre-work.html>
 :::
 
-## Expected Behavior {.smaller}
+\
 
-> -   Model and support the norms of respect necessary to promote the conditions for healthy exchange of scientific ideas.
->
-> -   In speech or conduct, do not insult or disparage other participants.
->
-> -   Be conscious of hierarchical structures, specifically the existence of stark power differentials between students, early career statisticians and established career statisticians---noting that fear of retaliation from more established statisticians can make it difficult for students and early career statisticians to express discomfort, rebuff unwelcome advances, and report violations of the conduct policy.
->
-> -   Be sensitive to indications that may suggest that individuals are feeling unwelcome.
+::: task
+In addition, please:
 
-::: aside
-[ASA Code of Conduct](https://www.amstat.org/meetings/code-of-conduct)
+-   Install the `usethis` package `install.packages("usethis")`
+-   Download and open the exercises for this session:
+
+    ```{r}
+    #| eval: false
+
+    usethis::use_course("https://tinyurl.com/quarto-rt2")
+```
 :::
 
 ## About me
 
--   Professor of the Practice, Department of Statistical Science, Duke University
--   Developer Educator, Posit
--   R Markdown user/educator for 10+ years, Quarto user/educator for 1+ years
-
-## About you
-
-::: task
-Meet 1-2 people around you!
+::: columns
+::: {.column width="50%"}
+-   Associate Teaching Professor\
+    Department of Statistics\
+    UC Berkeley
 :::
 
-```{r}
-#| echo: false
-
-countdown(minutes = 2)
-```
-
-## Workshop structure
-
--   **My turn:** Lecture segments + live coding
-
--   **Our turn:** Live coding + follow along
-
--   **Your turn:** Exercises
-
-## Getting help
-
--   During **my turn** and **our turn** segments -- raise your hand
-
--   During **your turn** segments -- also feel free to raise your hand for questions but use the stickies to signal:
-
-    -   Light green: I'd like some help / I'm stuck / I'm lost
-    -   Dark green: I'm done
-
-# Hello Quarto
+::: {.column width="50%"}
+-   R Markdown user for 10+ years\
+-   Quarto user for 1+ years
+:::
+:::
 
 ## Meeting you where you are
 
 ::: columns
 ::: {.column width="50%"}
 ::: {.fragment .fade-in-then-semi-out}
-I'll **assume** you
+These materials are pitched at someone who:
 
--   know some R
+-   knows some R
 
--   have worked in RStudio
+-   has worked in RStudio
 
 -   want to learn about Quarto
 :::
@@ -155,6 +95,14 @@ I'll **teach** you
 :::
 :::
 
+## Workshop structure
+
+-   **My turn:** Lecture segments + live coding
+
+-   **Our turn:** Live coding + follow along
+
+-   **Your turn:** Exercises
+
 ## Checking in one more time {.smaller}
 
 ::: task
@@ -170,10 +118,19 @@ Have you completed the following?
 
     ```{r}
     #| eval: false
-    #| ref.label: pkg-list
+    pkg_list <- c("tidyverse", "gt", "ggthemes", "palmerpenguins", 
+              "quarto", "here", "usethis")
+    install.packages(pkg_list)
     ```
 
--   Download `exercises.zip` at <https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio \> File \> New Project \> Existing Directory and navigate to the unzipped `exercises` folder and create an RStudio project in there and open it.
+-   Download and open the exercises for this session:
+
+    ```{r}
+    #| eval: false
+
+    usethis::use_course("https://tinyurl.com/quarto-rt2")
+    ```
+    
 :::
 
 . . .
@@ -234,7 +191,6 @@ but not *just like* it, there's more to it...
 ::: incremental
 -   Consistent implementation of attractive and handy features across outputs: tabsets, code-folding, syntax highlighting, etc.
 -   More accessible defaults as well as better support for accessibility
--   Guardrails, particularly helpful for new learners: YAML completion, informative syntax errors, etc.
 -   Support for other languages like Python, Julia, Observable, and more via Jupyter engine for executable code chunks.
 :::
 
@@ -255,7 +211,7 @@ Open `hello-penguins.qmd` in RStudio and with the visual editor. Render the docu
 ```{r}
 #| echo: false
 
-countdown(minutes = 10)
+countdown(minutes = 7)
 ```
 
 # Quarto CLI
@@ -269,7 +225,7 @@ Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`
 #| echo: true
 #| code-line-numbers: "|1|4|12|17|18"
 
-mine$ quarto --help
+andrewbray$ quarto --help
 
   Usage:   quarto 
   Version: 1.3.340
@@ -357,15 +313,9 @@ return {
 
 # Navigating within RStudio
 
-## Quarto workflow
-
-Rendering a Quarto file in RStudio via the Render button calls `quarto render` in a **background job**, preventing Quarto rendering from cluttering up the R console, and gives you and easy way to stop:
-
-![](images/background-job.png){fig-align="center" width="800"}
-
 ## Rendering
 
-1.  Option 1: In RStudio as a background job, and preview the output.
+1.  Option 1: In RStudio with ![](images/render-button.png) as a background job, and preview the output.
 
 . . .
 
