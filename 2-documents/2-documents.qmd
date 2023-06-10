@@ -1,18 +1,20 @@
 ---
 title: "Documents"
-subtitle: "Dynamic Documents: Quarto for R, Julia, and Python"
-institute: "RT2 UC Berkeley "
-author: "Andrew Bray"
+subtitle: "From R Markdown to Quarto"
 # footer: "[🔗 mine.quarto.pub/quarto-asa-nebraska](https://mine.quarto.pub/quarto-asa-nebraska)"
-logo: "../images/logo.png"
 format:
   revealjs:
-    theme: ../style/slides.scss
+    author:
+      - "Andrew Bray"
+      - "Mine Çetinkaya Rundel"
+    institute:
+      - "UC Berkeley"
+      - "Duke University + Posit"
     transition: fade
     slide-number: true
-execute:
-  freeze: auto
-  echo: true
+    chalkboard: false
+    logo: "../images/logo.png"
+    theme: [../style/quarto-asa.scss, ../style/slides.scss]
 ---
 
 ```{r}

@@ -1,19 +1,20 @@
 ---
 title: "Hello Quarto"
-subtitle: "Dynamic Documents: Quarto for R, Julia, and Python"
-institute: "RT2 UC Berkeley "
-author: "Andrew Bray"
+subtitle: "From R Markdown to Quarto"
 # footer: "[🔗 mine.quarto.pub/quarto-asa-nebraska](https://mine.quarto.pub/quarto-asa-nebraska)"
-logo: "../images/logo.png"
 format:
   revealjs:
-    theme: ../style/slides.scss
+    author:
+      - "Andrew Bray"
+      - "Mine Çetinkaya Rundel"
+    institute:
+      - "UC Berkeley"
+      - "Duke University + Posit"
     transition: fade
     slide-number: true
     chalkboard: false
-execute:
-  freeze: auto
-  echo: true
+    logo: "../images/logo.png"
+    theme: [../style/quarto-asa.scss, ../style/slides.scss]
 ---
 
 ```{r}
@@ -33,23 +34,45 @@ While you wait for the workshop to begin, be sure you've got all the tools neede
 
 \
 
-::: {style="font-size: 1.2em"}
-<https://andrew.quarto.pub/rt2-quarto/pre-work.html>
+::: {style="font-size: 1.6em"}
+<https://andrew.quarto.pub/oregon-asa>
 :::
 
 \
 
 ::: task
-In addition, please:
 
--   Install the `usethis` package `install.packages("usethis")`
--   Download and open the exercises for this session:
+In addition, please download and open the exercises for this session:
 
-    ```{r}
-    #| eval: false
+```{r}
+#| eval: false
+#| echo: true
 
-    usethis::use_course("https://tinyurl.com/quarto-rt2")
+usethis::use_course("https://tinyurl.com/asa-oregon")
 ```
+
+:::
+
+## Code of Conduct {.smaller}
+
+> The American Statistical Association (ASA) is committed to providing an atmosphere in which personal respect and intellectual growth are valued and the free expression and exchange of ideas are encouraged. Consistent with this commitment, it is the policy of the ASA that all participants in ASA activities enjoy a welcoming environment free from unlawful discrimination, harassment, and retaliation. We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to, members of any race, ethnicity, culture, national origin, color, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
+
+::: aside
+[ASA Code of Conduct](https://www.amstat.org/meetings/code-of-conduct)
+:::
+
+## Expected Behavior {.smaller}
+
+- Model and support the norms of respect necessary to promote the conditions for healthy exchange of scientific ideas.
+
+- In speech or conduct, do not insult or disparage other participants.
+
+- Be conscious of hierarchical structures, specifically the existence of stark power differentials between students, early career statisticians and established career statisticians—noting that fear of retaliation from more established statisticians can make it difficult for students and early career statisticians to express discomfort, rebuff unwelcome advances, and report violations of the conduct policy.
+
+- Be sensitive to indications that may suggest that individuals are feeling unwelcome.
+
+::: aside
+[ASA Code of Conduct](https://www.amstat.org/meetings/code-of-conduct)
 :::
 
 ## About me
@@ -74,11 +97,11 @@ In addition, please:
 ::: {.fragment .fade-in-then-semi-out}
 These materials are pitched at someone who:
 
--   knows some R
+-   knows some R + Markdown
 
 -   has worked in RStudio
 
--   want to learn about Quarto
+-   wants to learn about Quarto
 :::
 :::
 
