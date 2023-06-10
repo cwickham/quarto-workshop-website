@@ -1,15 +1,13 @@
 project:
   type: website
-  resources:
-    - exercises.zip
 
 website:
   page-navigation: true
-  title: "Dynamic Documents: Quarto"
-  description: "RT2 Short Workshop - Quarto"
+  title: "From R Markdown to Quarto"
+  description: "ASA Travelling Workshop"
 
-  repo-url: https://github.com/quarto-rt2/quarto-rt2
-  repo-actions: [edit, issue]
+  # repo-url: https://github.com/andrewpbray/quarto-asa
+  # repo-actions: [edit, issue]
 
   open-graph: true
 
@@ -18,11 +16,10 @@ website:
     logo: "images/logo.png"
     pinned: true
     align: center
-    tools:
-      - icon: github
-        href: https://github.com/quarto-rt2/quarto-rt2
-        text: "GitHub organization"
-
+    # tools:
+    #   - icon: github
+    #     href: https://github.com/andrewpbray/quarto-asa
+    #     text: "GitHub organization"
     style: docked
     search: true
     collapse-level: 2
@@ -31,7 +28,8 @@ website:
         text: Home
       - href: pre-work.qmd
         text: Pre-work
-      - section: "Modules"
+      - text: "---"
+      - section: "Producing a Single Document"
         contents:
           - href: 1-hello-quarto/index.qmd
             text: Hello Quarto
@@ -39,21 +37,24 @@ website:
             text: Documents
           - href: 3-presentations/index.qmd
             text: Presentations
+      - text: "---"
+      - section: "Producing Websites and Books"
+        contents:
           - href: 4-websites/index.qmd
             text: Websites
+          - href: 5-books/index.qmd
+            text: Books
+          - href: 6-miscellaneous/index.qmd
+            text: Miscellaneous
 
   page-footer:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
     left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
-    background: "#D1D9E3" # Arylide Yellow
 
 format:
   html:
     theme:
-      light: [sandstone, style/sta313.scss]
-      dark: [sandstone, style/sta313.scss, style/dark.scss]
-    linkcolor: "#58779b"
-    toc: true
+      light: [style/quarto-asa.scss]
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
