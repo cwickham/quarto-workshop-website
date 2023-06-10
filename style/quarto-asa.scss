@@ -3,8 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 
 $font-family: "Atkinson Hyperlegible", sans-serif;
-$link-color: #58779b;
-$hover-color: lighten($link-color, 40%);
+
+$primary-color: #89c338;
+$secondary-color: #1770b9;
+$link-color: $secondary-color;
+$hover-color: lighten($link-color, 10%);
+$sidebar-bg: $primary-color;
 
 /*-- scss:rules --*/
 
