@@ -5,12 +5,9 @@ website:
   page-navigation: true
   title: "From R Markdown to Quarto"
   description: "ASA Travelling Workshop"
-
-  # repo-url: https://github.com/andrewpbray/quarto-asa
-  # repo-actions: [edit, issue]
-
+  repo-url: https://github.com/andrewpbray/quarto-asa
+  repo-actions: [edit, issue]
   open-graph: true
-
   sidebar:
     background: "#D1D9E3"
     logo: "images/logo.png"
@@ -58,6 +55,8 @@ format:
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
+    toc: true
 
 execute:
   freeze: auto
+  echo: true
