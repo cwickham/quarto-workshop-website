@@ -1,9 +1,6 @@
 ---
 title: "From R Markdown to Quarto"
 subtitle: "ASA Travelling Workshop"
-format:
-  html:
-    toc: false
 ---
 
 > 9:30 am -5:30 pm\
