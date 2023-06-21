@@ -1,7 +1,7 @@
 ---
 title: "Books"
 subtitle: "From R Markdown to Quarto"
-# footer: "[🔗 mine.quarto.pub/quarto-asa-nebraska](https://mine.quarto.pub/quarto-asa-nebraska)"
+footer: "[andrew.quarto.pub/oregon-asa](https://andrew.quarto.pub/oregon-asa)"
 format:
   revealjs:
     author:

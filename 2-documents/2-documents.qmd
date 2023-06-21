@@ -1,7 +1,7 @@
 ---
 title: "Documents"
 subtitle: "From R Markdown to Quarto"
-# footer: "[🔗 mine.quarto.pub/quarto-asa-nebraska](https://mine.quarto.pub/quarto-asa-nebraska)"
+footer: "[andrew.quarto.pub/oregon-asa](https://andrew.quarto.pub/oregon-asa)"
 format:
   revealjs:
     author:
@@ -353,18 +353,18 @@ You can embed [named hyperlinks](https://quarto.org/), direct urls like <https:/
 ::: columns
 ::: {.column width="50%"}
 ```         
-![Penguins playing with a Quarto ball](images/penguins-quarto-ball.png){fig-align="left"}
+![](images/penguins-quarto-ball.png){fig-align="left" width=250}
 ```
 
-![](images/penguins-quarto-ball.png)
+![](images/penguins-quarto-ball.png){fig-align="left" width=250}
 :::
 
 ::: {.column width="50%"}
 ```         
-![](images/penguins-quarto-ball.png){fig-align="right" fig-alt="Illustration of two penguins playing with a Quarto ball."}
+![](images/penguins-quarto-ball.png){fig-align="right" width=250 fig-alt="Illustration of two penguins playing with a Quarto ball."}
 ```
 
-![](images/penguins-quarto-ball.png){fig-align="right" fig-alt="Illustration of two penguins playing with a Quarto ball."}
+![](images/penguins-quarto-ball.png){fig-align="right" width=250 fig-alt="Illustration of two penguins playing with a Quarto ball."}
 :::
 :::
 
@@ -441,7 +441,7 @@ Ordered list:
 
 ::: task
 -   Open `markdown-syntax.qmd` in RStudio.
--   Follow the instructions in the document, then exchange one new thing you've learned with your neighbor.
+-   Follow the instructions in the document for how to modify it, then exchange one new thing you've learned with your neighbor.
 :::
 
 ```{r}
@@ -449,6 +449,215 @@ Ordered list:
 
 countdown(minutes = 5)
 ```
+
+# Tables
+
+## Markdown tables
+
+**Markdown:**
+
+``` markdown
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |
+```
+
+. . .
+
+**Output:**
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+## Grid tables
+
+**Markdown:**
+
+``` markdown
++---------------+---------------+--------------------+
+| Fruit         | Price         | Advantages         |
++===============+===============+====================+
+| Bananas       | $1.34         | - built-in wrapper |
+|               |               | - bright color     |
++---------------+---------------+--------------------+
+| Oranges       | $2.10         | - cures scurvy     |
+|               |               | - tasty            |
++---------------+---------------+--------------------+
+
+: Sample grid table.
+```
+
+## Grid tables
+
+**Output:**
+
++---------------+---------------+----------------------+
+| Fruit         | Price         | Advantages           |
++===============+===============+======================+
+| Bananas       | \$1.34        | -   built-in wrapper |
+|               |               | -   bright color     |
++---------------+---------------+----------------------+
+| Oranges       | \$2.10        | -   cures scurvy     |
+|               |               | -   tasty            |
++---------------+---------------+----------------------+
+
+: Sample grid table.
+
+## Grid tables: Alignment
+
+-   Alignments can be specified as with pipe tables, by putting colons at the boundaries of the separator line after the header:
+
+```         
++---------------+---------------+--------------------+
+| Right         | Left          | Centered           |
++==============:+:==============+:==================:+
+| Bananas       | $1.34         | built-in wrapper   |
++---------------+---------------+--------------------+
+```
+
+. . .
+
+-   For headerless tables, the colons go on the top line instead:
+
+```         
++--------------:+:--------------+:------------------:+
+| Right         | Left          | Centered           |
++---------------+---------------+--------------------+
+```
+
+## Grid tables: Authoring
+
+-   Note that grid tables are quite awkward to write with a plain text editor because unlike pipe tables, the column indicators must align.
+
+-   The Visual Editor can assist in making these tables!
+
+## Tables from code {.smaller}
+
+The **knitr** package can turn data frames into tables with `knitr::kable()`:
+
+```{r}
+library(knitr)
+library(palmerpenguins)
+
+head(penguins) |> 
+  kable()
+```
+
+## Tables from code {.smaller}
+
+If you want fancier tables, try the **gt** package and [all that it offers](https://gt.rstudio.com/)!
+
+```{r}
+#| output-location: column-fragment
+
+library(gt)
+
+head(penguins) |> 
+  gt() |>
+  tab_style(
+    style = list(
+      cell_fill(color = "pink"),
+      cell_text(style = "italic")
+      ),
+    locations = cells_body(
+      columns = bill_length_mm,
+      rows = bill_length_mm > 40
+    )
+  )
+```
+
+
+# Cross references
+
+## Cross references
+
+-   Help readers to navigate your document with numbered references and hyperlinks to entities like figures and tables.
+
+-   Cross referencing steps:
+
+    -   Add a caption to your figure or table.
+    -   Give an id to your figure or table, starting with `fig-` or `tbl-`.
+    -   Refer to it with `@fig-...` or `@tbl-...`.
+
+## Figure cross references {.smaller}
+
+The presence of the caption (`Blue penguin`) and label (`#fig-blue-penguin`) make this figure referenceable:
+
+::: columns
+::: {.column width="50%"}
+**Markdown:**
+
+``` markdown
+See @fig-blue-penguin for a cute blue penguin.
+![Blue penguin](images/blue-penguin.png){#fig-blue-penguin}
+```
+:::
+
+::: {.column width="50%"}
+**Output:**
+
+See @fig-blue-penguin for a cute blue penguin.
+
+![Blue Penguin](images/blue-penguin.png){#fig-blue-penguin fig-alt="A blue penguin" width="200"}
+:::
+:::
+
+## Table cross references {.smaller}
+
+The presence of the caption (`A few penguins`) and label (`#tbl-penguins`) make this table referenceable:
+
+::: columns
+::: {.column width="50%"}
+**Markdown:**
+
+```` markdown
+See @tbl-penguins for data on a few penguins.
+
+```{{r}}
+#| label: tbl-penguins
+#| tbl-cap: A few penguins
+
+head(penguins) |> 
+  gt()
+```
+````
+
+:::
+
+::: {.column width="50%"}
+**Output:**
+
+See @tbl-penguins for data on a few penguins.
+
+```{r}
+#| label: tbl-penguins
+#| tbl-cap: A few penguins
+
+head(penguins) |> 
+  gt()
+```
+:::
+:::
+
+## Your turn
+
+::: task
+-   Open `tables-figures.qmd`.
+-   Follow the instructions in the document.
+-   Exchange one new thing you've learned with your neighbor.
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 10)
+```
+
 
 # Quarto Elements
 
@@ -614,7 +823,7 @@ Look - a squirrel!
 ```{r}
 #| echo: false
 
-countdown(minutes = 3)
+countdown(minutes = 5)
 ```
 
 
@@ -838,7 +1047,7 @@ pi + 1
 :::
 :::
 
-[^setup]: No more ````{r setup}` :tada:
+[^setup]: No more ````{r setup}`!
 
 
 ## From Cell Option to YAML {auto-animate=true}
@@ -989,104 +1198,16 @@ ggplot(penguins, aes(x = bill_length_mm,
 
 > Save time/code by moving figure sizing defaults up to the YAML.
 
-## Example: Simple Dataframes
-
-. . .
-
-R's default isn't designed for effective display.
-
-:::columns
-:::{.column width=40%}
-````markdown
-```{{r}}
-penguins
-```
-````
-:::
-:::{.column width=60%}
-```{r}
-penguins
-```
-
-:::
-:::
-
-## `knitr::kable`
-
-`kable()` creates tables for $\LaTeX$, HTML, and Markdown output.
-
-:::columns
-:::{.column width=40%}
-````markdown
-```{{r}}
-knitr::kable(penguins)
-```
-````
-:::
-:::{.column width=60%}
-```{r}
-#| label: ex-kable
-knitr::kable(penguins)
-```
-:::
-:::
-
-## `knitr::kable`
-
-`df-print: kable` available as a document-level option.
-
-:::columns
-:::{.column width=40%}
-````markdown
----
-format:
-  html:
-    df-print: kable
----
-
-```{{r}}
-penguins
-```
-````
-:::
-:::{.column width=60%}
-```{r}
-#| ref.label="ex-kable"
-```
-:::
-:::
-
-## Paged Output
-
-`df-print: paged` available as a document-level option.
-
-:::columns
-:::{.column width=40%}
-````markdown
----
-format:
-  html:
-    df-print: paged
----
-
-```{{r}}
-penguins
-```
-````
-:::
-:::{.column width=60%}
-![](images/paged-df.png){width=70%}
-:::
-:::
 
 
 ## Your turn
 
 ::: task
--   Open `code-output.qmd` and render the document.
+-   Open `code-cells.qmd` and render the document.
 -   Add `echo: false` to the code cell and re-render.
--   Add another cell options found in the [Quarto Reference](https://quarto.org/docs/reference/cells/cells-knitr.html) (try `code-folding`).
+-   Add more cell options by using  Ctrl + Space after the `#|` or consult the [Quarto Reference](https://quarto.org/docs/reference/cells/cells-knitr.html).
 -   Add a second code cell (you can copy + paste the first), move your cell options to the YAML, and re-render.
+-   Share your favorite trick with your neighbor.
 :::
 
 ```{r}
@@ -1094,95 +1215,3 @@ penguins
 
 countdown(minutes = 7)
 ```
-
-# Wrap up
-
-## Questions
-
-::: task
-Any questions / anything you'd like to review before we wrap up this module?
-:::
-
-# Learning more
-
-1. See Modules 3 (Presentations) and Module 4 (Websites)
-2. <https://quarto.org/>
-3. Quarto Workshop at Posit Conference in September in Chicago.
-
-. . .
-
-Thank you.
-
-
-# Appendix
-
-# Cross references
-
-## Cross references
-
--   Help readers to navigate your document with numbered references and hyperlinks to entities like figures and tables.
-
--   Cross referencing steps:
-
-    -   Add a caption to your figure or table.
-    -   Give an id to your figure or table, starting with `fig-` or `tbl-`.
-    -   Refer to it with `@fig-...` or `@tbl-...`.
-
-## Figure cross references {.smaller}
-
-The presence of the caption (`Blue penguin`) and label (`#fig-blue-penguin`) make this figure referenceable:
-
-::: columns
-::: {.column width="50%"}
-**Markdown:**
-
-``` markdown
-See @fig-blue-penguin for a cute blue penguin.
-![Blue penguin](images/blue-penguin.png){#fig-blue-penguin}
-```
-:::
-
-::: {.column width="50%"}
-**Output:**
-
-See @fig-blue-penguin for a cute blue penguin.
-
-![Blue penguin](images/blue-penguin.png){#fig-blue-penguin fig-alt="A blue penguin" width="200"}
-:::
-:::
-
-## Table cross references {.smaller}
-
-The presence of the caption (`A few penguins`) and label (`#tbl-penguins`) make this table referenceable:
-
-::: columns
-::: {.column width="50%"}
-**Markdown:**
-
-```` markdown
-See @tbl-penguins for data on a few penguins.
-
-```{{r}}
-#| label: tbl-penguins
-#| tbl-cap: A few penguins
-
-head(penguins) |> 
-  gt()
-```
-````
-:::
-
-::: {.column width="50%"}
-**Output:**
-
-See @tbl-penguins for data on a few penguins.
-
-```{r}
-#| label: tbl-penguins
-#| tbl-cap: A few penguins
-
-head(penguins) |> 
-  gt()
-```
-:::
-:::

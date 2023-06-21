@@ -1,7 +1,7 @@
 ---
 title: "Presentations"
 subtitle: "From R Markdown to Quarto"
-# footer: "[🔗 mine.quarto.pub/quarto-asa-nebraska](https://mine.quarto.pub/quarto-asa-nebraska)"
+footer: "[andrew.quarto.pub/oregon-asa](https://andrew.quarto.pub/oregon-asa)"
 format:
   revealjs:
     author:
@@ -61,9 +61,9 @@ Let's build a presentation together from `hello-penguins-slides.qmd` and showcas
 
 -   Chalkboard
 
--   Multiplex
-
 -   Publishing your presentation to Quarto Pub
+
+-   Printing to PDF
 :::
 
 ## Your turn
@@ -90,6 +90,8 @@ countdown(minutes = 15)
 Let's continue building our a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:
 
 -   Fragments
+
+-   Animations
 
 -   Title slide attributes
 

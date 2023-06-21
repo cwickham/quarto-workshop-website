@@ -1,7 +1,7 @@
 ---
 title: "Hello Quarto"
 subtitle: "From R Markdown to Quarto"
-# footer: "[🔗 mine.quarto.pub/quarto-asa-nebraska](https://mine.quarto.pub/quarto-asa-nebraska)"
+footer: "[andrew.quarto.pub/oregon-asa](https://andrew.quarto.pub/oregon-asa)"
 format:
   revealjs:
     author:
@@ -48,7 +48,7 @@ In addition, please download and open the exercises for this session:
 #| eval: false
 #| echo: true
 
-usethis::use_course("https://tinyurl.com/asa-oregon")
+usethis::use_course("https://tinyurl.com/oregon-asa")
 ```
 
 :::
@@ -90,6 +90,21 @@ usethis::use_course("https://tinyurl.com/asa-oregon")
 :::
 :::
 
+## About you
+
+::: task
+Meet 1-2 people around you!
+
+- What do you use R and R Markdown for?
+
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 2)
+```
+
 ## Meeting you where you are
 
 ::: columns
@@ -126,34 +141,35 @@ I'll **teach** you
 
 -   **Your turn:** Exercises
 
+
 ## Checking in one more time {.smaller}
 
 ::: task
-Have you completed the following?
 
--   Download and install the latest versions of R, RStudio, and Quarto:
+**1. Software:** Download and install the latest versions of R, RStudio, and Quarto:
 
-    -   R: <https://cran.r-project.org>
-    -   RStudio: <https://posit.co/download/rstudio-desktop>
-    -   Quarto: <https://quarto.org/docs/get-started>
+-   R 4.2.3 or above: <https://cran.r-project.org>
+-   RStudio 2023.03.0+386 or above: <https://posit.co/download/rstudio-desktop>
+-   Quarto 1.3.321: <https://quarto.org/docs/get-started>
 
--   Install the following packages:
+**2. R Packages:** Install the following packages:
 
-    ```{r}
-    #| eval: false
-    pkg_list <- c("tidyverse", "gt", "ggthemes", "palmerpenguins", 
+```{r}
+#| eval: false
+
+pkg_list <- c("tidyverse", "gt", "ggthemes", "palmerpenguins", 
               "quarto", "here", "usethis")
-    install.packages(pkg_list)
-    ```
+install.packages(pkg_list)
+```
 
--   Download and open the exercises for this session:
+**3. Exercises:** Download and open the exercises for this session. The easiest way is to run this line of R code at the console in RStudio.
 
-    ```{r}
-    #| eval: false
+```{r}
+#| eval: false
 
-    usethis::use_course("https://tinyurl.com/quarto-rt2")
-    ```
-    
+usethis::use_course("https://tinyurl.com/oregon-asa")
+```
+
 :::
 
 . . .
@@ -234,7 +250,7 @@ Open `hello-penguins.qmd` in RStudio and with the visual editor. Render the docu
 ```{r}
 #| echo: false
 
-countdown(minutes = 7)
+countdown(minutes = 10)
 ```
 
 # Quarto CLI
@@ -279,21 +295,25 @@ andrewbray$ quarto --help
     help            [command]             - Show this help or the help of a sub-command.      
 ```
 
-## Quarto, more than *just* `knitr`
+## {menu="Quarto Diagram 1"}
 
-. . .
+![](images/quarto-workshop-1.jpg)
 
-We learned from 10 years of literate programming with `knitr` + `rmarkdown`
+## {menu="Quarto Diagram 2"}
 
-![](images/qmd-knitr.png)
+![](images/quarto-workshop-2.jpg)
 
-## Quarto, more than *just* `knitr`
+## {menu="Quarto Diagram 3"}
 
-![](images/qmd-jupyter.png)
+![](images/quarto-workshop-3.jpg)
 
-## Quarto: More than *just* `knitr`
+## {menu="Quarto Diagram 4"}
 
-![](images/jupyter-alone.png)
+![](images/quarto-workshop-4.jpg)
+
+## {menu="Quarto Diagram 5"}
+
+![](images/quarto-workshop-5.jpg)
 
 ## Under the hood
 
@@ -463,7 +483,7 @@ Use the visual editor for the next steps.
 
 -   Add a title and your name as the author.
 
--   Create two sections, one with fact you want to learn and your favorite thing about R.
+-   Create two sections, one with things you would like to use Quarto for and a second with your favorite thing about R.
 
 -   Add a table of contents.
 
