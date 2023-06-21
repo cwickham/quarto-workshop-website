@@ -4,10 +4,10 @@ Materials for the "From R Markdown to Quarto" ASA Traveling workshop.
 
 ## Workshop materials
 
-<https://andrew.quarto.pub/oregon-asa/>
-Oregon Chapter
-Portland, Oregon
-June 10, 2023
+<https://andrew.quarto.pub/oregon-asa/>\
+Oregon Chapter\
+Portland, Oregon\
+June 10, 2023\
 [Source Tag](https://github.com/andrewpbray/quarto-asa/tree/oregon-chapter)
 
 
