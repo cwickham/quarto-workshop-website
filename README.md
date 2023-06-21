@@ -2,6 +2,16 @@
 
 Materials for the "From R Markdown to Quarto" ASA Traveling workshop.
 
+## Workshop materials
+
+<https://andrew.quarto.pub/oregon-asa/>
+Oregon Chapter
+Portland, Oregon
+June 10, 2023
+[Source Tag](https://github.com/andrewpbray/quarto-asa/tree/oregon-chapter)
+
+
+
 ## Abstract
 
 This workshop is designed for those who want to take their R Markdown skills and expertise and apply them in Quarto, the next generation of R Markdown. Quarto is an open-source scientific and technical publishing system that offers multilingual programming language support to create dynamic and static documents, books, presentations, blogs, and other online resources. In this workshop you will learn how to apply your reproducible authoring skills to the Quarto format and learn about new tools and workflows for authoring with Quarto in RStudio. You will learn to create static documents as well as slide presentations. The workshop will also introduce you to Quarto projects which you can use to build websites and write blogs and books. Finally, you will learn various ways to deploy and publish your Quarto projects on the web.
