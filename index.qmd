@@ -1,12 +1,17 @@
 ---
 title: "From R Markdown to Quarto"
 subtitle: "ASA Travelling Workshop"
+format:
+  html:
+    toc: false
 ---
 
-> 9:30 am -5:30 pm\
-> Saturday, June 10, 2023\
-> Robertson Collaborative Life Sciences Building, OHSU\
-> Portland, Oregon
+> 9:30 am -5:00 pm\
+> Thursday, June 22, 2023\
+> Alaska Science Center\
+> Glenn Olds Hall\
+> 4210 University Drive\
+> Anchorage, AK 99508
 
 Quarto is an open-source scientific and technical publishing system that offers multilingual programming language support to create dynamic and static documents, books, presentations, blogs, and other online resources. In this workshop, you will learn how to apply your reproducible authoring skills to the Quarto format and learn about new tools and workflows for authoring with Quarto in RStudio. You will learn to create static documents as well as slide presentations. The workshop will also introduce you to Quarto projects which you can use to build websites and write blogs and books. Finally, you will learn various ways to deploy and publish your Quarto projects on the web.
 
@@ -41,7 +46,7 @@ Quarto is an open-source scientific and technical publishing system that offers 
 | 3:00 - 3:10 | 10 min break                               |
 | 3:10 - 4:10 | [Books](5-books/)                 |
 | 4:10 - 4:30 | 20 min break                               |
-| 4:30 - 5:30 | [Miscellaneous](6-miscellaneous/) / [Wrap-up](7-wrap-up/)    |
+| 4:30 - 5:00 | [Miscellaneous](6-miscellaneous/) / [Wrap-up](7-wrap-up/)    |
 
 : {tbl-colwidths="\[25,35\]"}
 
