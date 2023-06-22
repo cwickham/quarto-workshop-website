@@ -10,7 +10,7 @@ website:
     left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
     center:
       - icon: github
-        href: https://github.com/andrewpbray/quarto-asa
+        href: https://github.com/orgs/asa-quarto/repositories
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
   open-graph: true
   sidebar:
