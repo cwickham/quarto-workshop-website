@@ -6,17 +6,18 @@ website:
   title: "From R Markdown to Quarto"
   description: "ASA Travelling Workshop"
   repo-url: https://github.com/andrewpbray/quarto-asa
-  repo-actions: [edit, issue]
+  page-footer:
+    left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
+    center:
+      - icon: github
+        href: https://github.com/andrewpbray/quarto-asa
+    right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
   open-graph: true
   sidebar:
     background: "#D1D9E3"
     logo: "images/logo.png"
     pinned: true
     align: center
-    # tools:
-    #   - icon: github
-    #     href: https://github.com/andrewpbray/quarto-asa
-    #     text: "GitHub organization"
     style: docked
     search: true
     collapse-level: 2
@@ -44,14 +45,10 @@ website:
           - href: 6-miscellaneous/index.qmd
             text: Miscellaneous
 
-  page-footer:
-    right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
-
 format:
   html:
     theme:
-      light: [style/quarto-asa.scss]
+      light: [sandstone, style/quarto-asa.scss]
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
