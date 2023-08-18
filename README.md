@@ -10,6 +10,17 @@ Portland, Oregon\
 June 10, 2023\
 [Source Tag](https://github.com/andrewpbray/quarto-asa/tree/oregon-chapter)
 
+<https://andrew.quarto.pub/alaska-asa/>\
+Alaska Chapter\
+Anchorage, Alaska\
+June 20, 2023\
+[Source Tag](https://github.com/asa-quarto/website/releases/tag/alaska-workshop)
+
+<https://andrew.quarto.pub/ohio-asa/>\
+Ohio Chapter\
+Virtual Workshop on Zoom\
+August 18, 2023\
+
 
 
 ## Abstract
