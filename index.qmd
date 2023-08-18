@@ -27,8 +27,7 @@ Quarto is an open-source scientific and technical publishing system that offers 
 | 9:30 - 10:30   | [Hello Quarto](1-hello-quarto/)   |
 | 10:30 - 10:40   | 10 min break                               |
 | 10:40 - 11:40  | [Documents](2-documents/)         |
-| 11:40 - 12:00 | 20 min break                             |
-| 12:00 - 1:00 | [Presentations](3-presentations/) |
+| 12:00 - 1  | Lunch                           |
 
 : {tbl-colwidths="\[25,35\]"}
 
@@ -42,11 +41,13 @@ Quarto is an open-source scientific and technical publishing system that offers 
 
 | Time        | Module                              |
 |-------------|-------------------------------------|
+| 1:00 - 1:50 | [Presentations](3-presentations/) |
+| 1:50 - 2:00 | 10 min break                               |
 | 2:00 - 3:00 | [Websites](4-websites/)           |
 | 3:00 - 3:10 | 10 min break                               |
 | 3:10 - 4:10 | [Books](5-books/)                 |
 | 4:10 - 4:30 | 20 min break                               |
-| 4:30 - 5:00 | [Miscellaneous](6-miscellaneous/) / [Wrap-up](7-wrap-up/)    |
+| 4:30 - 5:00 | [Miscellaneous](6-miscellaneous/)     |
 
 : {tbl-colwidths="\[25,35\]"}
 

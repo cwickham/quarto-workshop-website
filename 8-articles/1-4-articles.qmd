@@ -12,7 +12,6 @@ format:
     transition: fade
     slide-number: true
     chalkboard: true
-editor: visual
 execute:
   freeze: auto
   echo: true
@@ -70,7 +69,7 @@ and creating the LaTeX required for submission to multiple journals.
 :::
 
 | Journal / Publisher                       | Name                                                                          |
-|-------------------------------------------|-------------------------------------------------------------------------------|
+|--------------------------|----------------------------------------------|
 | Association of Computing Machinery        | [acm](https://github.com/quarto-journals/acm)                                 |
 | American Chemical Society                 | [acs](https://github.com/quarto-journals/acs)                                 |
 | American Geophysical Union                | [agu](https://github.com/quarto-journals/agu)                                 |
@@ -84,7 +83,7 @@ and creating the LaTeX required for submission to multiple journals.
 
 The `quarto use template` command can be used to create an article from one these formats, e.g. for JASA:
 
-```{.bash filename="Terminal"}
+``` {.bash filename="Terminal"}
 quarto use template quarto-journals/jasa
 ```
 
@@ -124,7 +123,6 @@ countdown(minutes = 10)
 
 ::: learn-more
 [quarto.org/docs/journals/index.html](https://quarto.org/docs/journals/index.html)
-
 
 ```{=html}
 <iframe src="https://quarto.org/docs/journals/index.html" width="100%" height="500" style="border:2px solid #123233;" title="Quarto Journal Articles"></iframe>

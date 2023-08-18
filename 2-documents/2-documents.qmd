@@ -1,7 +1,7 @@
 ---
 title: "Documents"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/oregon-asa](https://andrew.quarto.pub/oregon-asa)"
+footer: "[andrew.quarto.pub/alaska-asa](https://andrew.quarto.pub/alaska-asa)"
 format:
   revealjs:
     author:
@@ -77,7 +77,24 @@ Source: <https://en.wikipedia.org/wiki/Literate_programming>
 
 ## YAML
 
-"Yet Another Markup Language" or "YAML Ain't Markup Language" is used to provide document level metadata.
+"Yet Another Markup Language" or "YAML Ain't Markup Language" is used to provide document level metadata ...
+
+. . .
+
+... in key-value pairs,
+
+. . .
+
+... that can nest,
+
+. . .
+
+... are fussy about indentation,
+
+. . .
+
+... and are kept between `---`.
+
 
 ``` yaml
 ---
@@ -85,7 +102,7 @@ key: value
 ---
 ```
 
-## Output options
+## Example: Output options
 
 ``` yaml
 ---
@@ -115,7 +132,7 @@ format: revealjs
 ---
 ```
 
-## Output option arguments
+## Example: Indented nesting
 
 Indentation matters!
 
@@ -128,7 +145,7 @@ format:
 ---
 ```
 
-## YAML validation {.smaller}
+## Fussing with YAML (invalid) {.smaller}
 
 -   Invalid: No space after `:`
 
@@ -156,7 +173,7 @@ format:
 ---
 ```
 
-## YAML validation {.smaller}
+## Fussing with YAML (valid) {.smaller}
 
 There are multiple ways of formatting valid YAML:
 
@@ -240,14 +257,14 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 ::: task
 -   Open `hello-penguins.qmd` in RStudio.
 -   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
--   Try out the tab-completion of any options you remember.
+-   Try out the tab-completion of any options that sound interesting.
 -   You can use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
 :::
 
 ```{r}
 #| echo: false
 
-countdown(minutes = 3)
+countdown(minutes = 5)
 ```
 
 ## List of valid YAML fields
@@ -403,8 +420,8 @@ Ordered list:
 ``` markdown
 1. ordered list            
 2. item 2                  
-    i. sub-item 1          
-         A.  sub-sub-item 1
+   i. sub-item 1          
+      A.  sub-sub-item 1
 ```
 :::
 
@@ -607,7 +624,7 @@ See @fig-blue-penguin for a cute blue penguin.
 :::
 :::
 
-## Table cross references {.smaller}
+## Table cross references (from code) {.smaller}
 
 The presence of the caption (`A few penguins`) and label (`#tbl-penguins`) make this table referenceable:
 
@@ -644,6 +661,43 @@ head(penguins) |>
 :::
 :::
 
+## Table cross references (from markdown) {.smaller}
+
+The presence of the caption (`A few penguins`) and label (`#tbl-penguins`) make this table referenceable:
+
+::: columns
+::: {.column width="50%"}
+**Markdown:**
+
+```` markdown
+See @tbl-numbers for data on a few penguins.
+
+| Right | Left |
+|------:|:-----|
+|   12  |  12  |
+|  123  |  123 |
+
+: An array of numbers {#tbl-numbers}
+
+````
+
+:::
+
+::: {.column width="50%"}
+**Output:**
+
+See @tbl-numbers for data on a few penguins.
+
+| Right | Left |
+|------:|:-----|
+|   12  |  12  |
+|  123  |  123 |
+
+: An array of numbers {#tbl-numbers}
+:::
+:::
+
+
 ## Your turn
 
 ::: task
@@ -655,7 +709,7 @@ head(penguins) |>
 ```{r}
 #| echo: false
 
-countdown(minutes = 10)
+countdown(minutes = 8)
 ```
 
 
@@ -671,14 +725,22 @@ countdown(minutes = 10)
 
 ### What you're about to see . . .
 
-- Most of the elements work across the main output formats (html, pdf, docx, pptx)
-- Most of this is new Quarto functionality. Some of it is original Pandoc.
-- This is a subset of the elements available. See the Quarto Guide for the full list.
+- Extends the type of elements you can add to a doc
+- Will work across the main output formats (html, pdf, docx, pptx)
+
+:::{.fragment}
+### Ingredients
+
+**Fenced Div** and **Bracketed Span**
+:::
+
 :::
 :::{.column width=20%}
 :::
 :::
 
+
+## The Bracketed Span {transition="none"}
 
 ## The Bracketed Span {transition="none"}
 

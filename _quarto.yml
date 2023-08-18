@@ -48,7 +48,7 @@ website:
 format:
   html:
     theme:
-      light: [sandstone, style/quarto-asa.scss]
+      light: style/quarto-asa.scss
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"

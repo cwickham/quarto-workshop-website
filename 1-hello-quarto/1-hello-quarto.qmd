@@ -1,7 +1,7 @@
 ---
 title: "Hello Quarto"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/oregon-asa](https://andrew.quarto.pub/oregon-asa)"
+footer: "[andrew.quarto.pub/alaska-asa](https://andrew.quarto.pub/alaska-asa)"
 format:
   revealjs:
     author:
@@ -35,7 +35,7 @@ While you wait for the workshop to begin, be sure you've got all the tools neede
 \
 
 ::: {style="font-size: 1.6em"}
-<https://andrew.quarto.pub/oregon-asa>
+<https://andrew.quarto.pub/alaska-asa>
 :::
 
 \
@@ -48,7 +48,7 @@ In addition, please download and open the exercises for this session:
 #| eval: false
 #| echo: true
 
-usethis::use_course("https://tinyurl.com/oregon-asa")
+usethis::use_course("https://tinyurl.com/alaska-asa")
 ```
 
 :::
@@ -93,8 +93,10 @@ usethis::use_course("https://tinyurl.com/oregon-asa")
 ## About you
 
 ::: task
-Meet 1-2 people around you!
+Please share:
 
+- Name
+- Professional affiliaton
 - What do you use R and R Markdown for?
 
 :::
@@ -124,11 +126,11 @@ These materials are pitched at someone who:
 ::: {.fragment .fade-in}
 I'll **teach** you
 
--   Quarto syntax and formats
-
 -   More Markdown
 
--   Even more R along the way!
+-   New Quarto formats
+
+-   New Quarto projects
 :::
 :::
 :::
@@ -167,7 +169,7 @@ install.packages(pkg_list)
 ```{r}
 #| eval: false
 
-usethis::use_course("https://tinyurl.com/oregon-asa")
+usethis::use_course("https://tinyurl.com/alaska-asa")
 ```
 
 :::
@@ -182,8 +184,7 @@ Let's get started!
 
 ## Quarto ...
 
--   is a new, open-source, scientific, and technical publishing system
--   aims to make the process of creating and collaborating dramatically better
+-   is a new, open-source, scientific, and technical publishing system.
 
 ![Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](images/horst_quarto_schematic.png){fig-alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto." fig-align="center"}
 
@@ -202,28 +203,6 @@ With Quarto you can weave together narrative text and code to produce elegantly 
 <br>
 
 but not *just like* it, there's more to it...
-
-## Quarto ... {.center auto-animate="true"}
-
-**unifies** + **extends** the R Markdown ecosystem
-
-## Quarto ... {.center auto-animate="true"}
-
-**unifies** + **extends** the R Markdown ecosystem
-
-<br>
-
-**unifies** for people who love R Markdown
-
-## Quarto ... {.center auto-animate="true"}
-
-**unifies** + **extends** the R Markdown ecosystem
-
-<br>
-
-**unifies** for people who love R Markdown
-
-**extends** for people who don't know R Markdown
 
 ## Quarto unifies + extends R Markdown
 
@@ -244,7 +223,12 @@ Sit back and enjoy!
 ## Your turn
 
 ::: task
-Open `hello-penguins.qmd` in RStudio and with the visual editor. Render the document. Update your name and re-render. Inspect components of the document and make one more update and re-render. Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
+Open `hello-penguins.qmd` in RStudio and with the `visual editor` . . .
+
+1. Render the document.
+2. Update your name and re-render.
+3. Inspect components of the document and make one more update and re-render.
+4. Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
 :::
 
 ```{r}
@@ -253,11 +237,15 @@ Open `hello-penguins.qmd` in RStudio and with the visual editor. Render the docu
 countdown(minutes = 10)
 ```
 
-# Quarto CLI
+# How it Works
+
+Introducing the Quarto CLI
 
 ## Revisit: What is Quarto? {.smaller}
 
 Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`, `.rmd`, `.md`) OR mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.
+
+. . .
 
 ```{bash}
 #| eval: false
@@ -394,7 +382,7 @@ quarto_render("document.qmd", output_format = "pdf")
 -   Compare behavior of rendering with
     -   RStudio \> Render,
     -   using the CLI with `quarto render`, and
-    -   in the R console via `quarto::quarto_render()`.
+    -   in the R console via `quarto_render()`.
 -   If you're an RStudio user, brainstorm why you might still want to know about the other two ways of rendering Quarto documents.
 :::
 
@@ -498,22 +486,20 @@ countdown(minutes = 5)
 
 # Wrap up
 
-## What about R Markdown? {.smaller}
+## What about R Markdown?
 
 ::: incremental
 -   You can render existing R Markdown documents with Quarto and you can rename them to `.qmd` files to turn them into Quarto documents.
 
 -   You don't have to do this -- R Markdown continues to be maintained.
 
--   However, new features are being developed for Quarto.
-
--   Additionally, Quarto
+-   However, Quarto
 
     -   Offers "batteries included" shared syntax across formats
 
     -   Allows you to choose your own editor and your preferred data science language
 
-    -   Comes with richer and more accessible features out of the box
+    -   Comes with richer features out of the box
 
     -   Is actively developed
 :::
