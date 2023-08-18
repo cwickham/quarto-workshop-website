@@ -1,7 +1,7 @@
 ---
 title: "Documents"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/alaska-asa](https://andrew.quarto.pub/alaska-asa)"
+footer: "[andrew.quarto.pub/ohio-asa](https://andrew.quarto.pub/ohio-asa)"
 format:
   revealjs:
     author:

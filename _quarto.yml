@@ -4,7 +4,7 @@ project:
 website:
   page-navigation: true
   title: "From R Markdown to Quarto"
-  description: "ASA Travelling Workshop"
+  description: "ASA Traveling Workshop, Ohio Chapter"
   repo-url: https://github.com/andrewpbray/quarto-asa
   page-footer:
     left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
