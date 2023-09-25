@@ -258,6 +258,7 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 -   Open `hello-penguins.qmd` in RStudio.
 -   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
 -   Try out the tab-completion of any options that sound interesting.
+-   Bring back your two favorite to share in chat when we return from breakout rooms.
 -   You can use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
 :::
 
@@ -458,7 +459,8 @@ Ordered list:
 
 ::: task
 -   Open `markdown-syntax.qmd` in RStudio.
--   Follow the instructions in the document for how to modify it, then exchange one new thing you've learned with your neighbor.
+-   Follow the instructions in the document for how to modify it.
+-   When we get back from breakout rooms, please share one thing you learned in chat.
 :::
 
 ```{r}
@@ -1269,7 +1271,7 @@ ggplot(penguins, aes(x = bill_length_mm,
 -   Add `echo: false` to the code cell and re-render.
 -   Add more cell options by using  Ctrl + Space after the `#|` or consult the [Quarto Reference](https://quarto.org/docs/reference/cells/cells-knitr.html).
 -   Add a second code cell (you can copy + paste the first), move your cell options to the YAML, and re-render.
--   Share your favorite trick with your neighbor.
+-   When we get back from breakout rooms, please share in chat your favorite trick when working with cell options.
 :::
 
 ```{r}
