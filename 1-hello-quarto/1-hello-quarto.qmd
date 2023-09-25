@@ -35,7 +35,7 @@ While you wait for the workshop to begin, be sure you've got all the tools neede
 \
 
 ::: {style="font-size: 1.6em"}
-<https://andrew.quarto.pub/alaska-asa>
+<https://andrew.quarto.pub/ohio-asa>
 :::
 
 \
@@ -48,7 +48,7 @@ In addition, please download and open the exercises for this session:
 #| eval: false
 #| echo: true
 
-usethis::use_course("https://tinyurl.com/alaska-asa")
+usethis::use_course("https://tinyurl.com/ohio-exercises")
 ```
 
 :::
@@ -104,7 +104,7 @@ Please share:
 ```{r}
 #| echo: false
 
-countdown(minutes = 2)
+countdown(minutes = 5)
 ```
 
 ## Meeting you where you are
@@ -135,14 +135,49 @@ I'll **teach** you
 :::
 :::
 
-## Workshop structure
+## Workshop structure {.smaller}
 
--   **My turn:** Lecture segments + live coding
+#### My Turn
+Lecture segments + live coding
 
--   **Our turn:** Live coding + follow along
+  - Please use Zoom Reactions > Raise Hand if you have a question
+    Alt+Y on PC, Opt+Y on MC
+  - Feel free to just watch, take notes, browse docs, or tinker around in RStudio.
 
--   **Your turn:** Exercises
+#### Our Turn
+Live coding + follow along
 
+  - Please try to follow along in RStudio during the live coding.
+  - If problems crop up for you, please put them in chat or hold on.
+
+#### Your Turn
+Practice exercises for you
+
+  - Breakout rooms of size ~3
+  - I'll stay in room 1. Raise hand and I'll come to you.
+
+
+## Eight hours on zoom! {.smaller}
+
+:::{.columns}
+
+:::{.column width="50%"}
+
+![](https://media.giphy.com/media/7sThmP82L5v20/giphy.gif)
+
+:::
+
+:::{.column width="50%"}
+
+Ideas for keeping it real
+
+1. 20 min breaks every hour. Turn off camera and leave your desk.
+2. Take longer breaks if needed (after first two sections).
+3. Contribute to the [Spotify collaborative playlist](https://open.spotify.com/playlist/4roDs3a42G8muTHAnp4oNw?si=8a348cdbcc534846&pt=8a56da71853831951873a78430048e91) (played during breaks). You'll need a Spotify account.
+
+:::
+
+:::
 
 ## Checking in one more time {.smaller}
 
@@ -169,7 +204,7 @@ install.packages(pkg_list)
 ```{r}
 #| eval: false
 
-usethis::use_course("https://tinyurl.com/alaska-asa")
+usethis::use_course("https://tinyurl.com/ohio-exercises")
 ```
 
 :::
@@ -524,3 +559,24 @@ Where does the name "Quarto" come from?
 ::: aside
 Source: <https://en.wikipedia.org/wiki/Quarto>
 :::
+
+## Let's take a break!
+
+:::{.columns}
+
+:::{.column width="50%}
+
+![](https://i.gifer.com/A7YM.gif){fig-align="center"}
+
+:::
+
+:::{.column width="50%}
+
+```{r}
+#| echo: false
+countdown::countdown(20, font_size = "8rem")
+```
+
+:::
+:::
+

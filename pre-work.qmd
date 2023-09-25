@@ -31,7 +31,7 @@ Download and open the exercises for this session. The easiest way is to run this
 ```{r}
 #| eval: false
 
-usethis::use_course("https://tinyurl.com/alaska-asa")
+usethis::use_course("https://tinyurl.com/ohio-exercises")
 ```
 
 If that doesn't work, you can download a zip file of the exercises [here](https://github.com/andrewpbray/quarto-asa), then open the directory. The qmd files can be opened in RStudio.
