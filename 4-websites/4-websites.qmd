@@ -77,8 +77,10 @@ Let's build a website together from all of the documents we've created so far an
 ::: task
 Pick up where we left off and
 
--   Add an [about page](https://quarto.org/docs/websites/website-about.html).
--   Cross reference one page from another.
+-   Add an [about page](https://quarto.org/docs/websites/website-about.html) to the navigation and customize it.
+-   Change your theme.
+-   Add a cross-reference to a figure on the same page as the reference.
+-   Add a cross-reference to a figure on a *different* page as the reference.
 :::
 
 ```{r}
