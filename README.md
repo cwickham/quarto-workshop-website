@@ -21,6 +21,11 @@ Ohio Chapter\
 Virtual Workshop on Zoom\
 August 18, 2023\
 
+<https://andrew.quarto.pub/boston-asa/>\
+Boston Chapter\
+Virtual Workshop on Zoom\
+September 20, 2023\
+
 
 
 ## Abstract
