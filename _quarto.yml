@@ -4,8 +4,8 @@ project:
 website:
   page-navigation: true
   title: "From R Markdown to Quarto"
-  description: "ASA Traveling Workshop, Ohio Chapter"
-  repo-url: https://github.com/andrewpbray/quarto-asa
+  description: "ASA Traveling Workshop, Boston Chapter"
+  repo-url: https://github.com/asa-quarto/website
   page-footer:
     left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
     center:
@@ -14,7 +14,7 @@ website:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
   open-graph: true
   sidebar:
-    background: "#D1D9E3"
+    background: "#007A33"
     logo: "images/logo.png"
     pinned: true
     align: center
@@ -27,23 +27,19 @@ website:
       - href: pre-work.qmd
         text: Pre-work
       - text: "---"
-      - section: "Producing a Single Document"
+      - section: "In the Morning"
         contents:
           - href: 1-hello-quarto/index.qmd
             text: Hello Quarto
           - href: 2-documents/index.qmd
             text: Documents
+      - text: "---"
+      - section: "In the Afternoon"
+        contents:
           - href: 3-presentations/index.qmd
             text: Presentations
-      - text: "---"
-      - section: "Producing Websites and Books"
-        contents:
           - href: 4-websites/index.qmd
             text: Websites
-          - href: 5-books/index.qmd
-            text: Books
-          - href: 6-miscellaneous/index.qmd
-            text: Miscellaneous
 
 format:
   html:
@@ -55,5 +51,5 @@ format:
     toc: true
 
 execute:
-  freeze: auto
+  freeze: false
   echo: true
