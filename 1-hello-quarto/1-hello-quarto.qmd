@@ -1,7 +1,7 @@
 ---
 title: "Hello Quarto"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/ohio-asa](https://andrew.quarto.pub/ohio-asa)"
+footer: "[andrew.quarto.pub/boston-asa](https://andrew.quarto.pub/boston-asa)"
 format:
   revealjs:
     author:
@@ -35,7 +35,7 @@ While you wait for the workshop to begin, be sure you've got all the tools neede
 \
 
 ::: {style="font-size: 1.6em"}
-<https://andrew.quarto.pub/ohio-asa>
+<https://andrew.quarto.pub/boston-asa>
 :::
 
 \
@@ -48,7 +48,7 @@ In addition, please download and open the exercises for this session:
 #| eval: false
 #| echo: true
 
-usethis::use_course("https://tinyurl.com/ohio-exercises")
+usethis::use_course("https://tinyurl.com/boston-exercises")
 ```
 
 :::
@@ -204,7 +204,7 @@ install.packages(pkg_list)
 ```{r}
 #| eval: false
 
-usethis::use_course("https://tinyurl.com/ohio-exercises")
+usethis::use_course("https://tinyurl.com/boston-exercises")
 ```
 
 :::
