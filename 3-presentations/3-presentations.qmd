@@ -128,20 +128,15 @@ Any questions / anything you'd like to review before we wrap up this module?
 
 ## Let's take a break!
 
-:::{.columns}
-
-:::{.column width="50%}
-
+::: columns
+::: {.column width="\"50%"}
 ![](https://i.gifer.com/A7YM.gif){fig-align="center"}
-
 :::
 
-:::{.column width="50%}
-
+::: {.column width="\"50%"}
 ```{r}
 #| echo: false
 countdown::countdown(15, font_size = "8rem")
 ```
-
 :::
 :::
