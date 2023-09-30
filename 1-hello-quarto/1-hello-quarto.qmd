@@ -181,9 +181,9 @@ Practice exercises for you
 
 Ideas for keeping it real
 
-1. 20 min breaks every hour. Turn off camera and leave your desk.
-2. Take longer breaks if needed (after first two sections).
-3. Contribute to the [Spotify collaborative playlist](https://open.spotify.com/playlist/4roDs3a42G8muTHAnp4oNw?si=8a348cdbcc534846&pt=8a56da71853831951873a78430048e91) (played during breaks). You'll need a Spotify account.
+1. Turn your camera on when you can.
+2. 15 min breaks after every segment. Turn off camera and leave your desk.
+3. Take longer breaks if needed.
 
 :::
 
@@ -507,28 +507,6 @@ countdown(minutes = 3)
 | Dashboards       | [flexdashboard](https://pkgs.rstudio.com/flexdashboard/)                     | Coming soon!                                                                |
 +------------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
 
-## Your turn
-
-::: task
-In RStudio, go to File \> New File \> Quarto document to create a Quarto document with HTML output. Render the document, which will ask you to give it a name -- you can use `my-first-document.qmd`.
-
-Use the visual editor for the next steps.
-
--   Add a title and your name as the author.
-
--   Create two sections, one with things you would like to use Quarto for and a second with your favorite thing about R.
-
--   Add a table of contents.
-
--   **Stretch goal:** Change the html theme to `sketchy`.
-:::
-
-```{r}
-#| echo: false
-
-countdown(minutes = 5)
-```
-
 # Wrap up
 
 ## What about R Markdown?
@@ -555,21 +533,6 @@ countdown(minutes = 5)
 Any questions / anything you'd like to review before we wrap up this module?
 :::
 
-## One last thing!
-
-::: task
-Where does the name "Quarto" come from?
-:::
-
-. . .
-
-```{=html}
-<iframe src="https://en.wikipedia.org/wiki/Quarto" title = "Quarto on Wikipedia" frameborder="1" height="400" width="900"></iframe>
-```
-::: aside
-Source: <https://en.wikipedia.org/wiki/Quarto>
-:::
-
 ## Let's take a break!
 
 :::{.columns}
@@ -589,4 +552,26 @@ countdown::countdown(15, font_size = "8rem")
 
 :::
 :::
+
+## Your turn
+
+::: task
+In RStudio, go to File \> New File \> Quarto document to create a Quarto document with HTML output. Render the document, which will ask you to give it a name -- you can use `my-first-document.qmd`.
+
+Use the visual editor for the next steps.
+
+-   Add a title and your name as the author.
+
+-   Create two sections, one with things you would like to use Quarto for and a second with your favorite thing about R.
+
+-   Add a table of contents.
+
+-   **Stretch goal:** Change the html theme to `sketchy`.
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 5)
+```
 
