@@ -1,14 +1,22 @@
 ---
 title: "Hello, Penguins!"
+title-slide-attributes:
+  data-background-image: images/r-logo.png
+  data-background-size: stretch
+  data-background-opacity: "0.5"
+author: Mine
+institute: Duke
 format: 
   revealjs:
     logo: images/quarto-logo.png
-    footer: "🔗 [quarto.org](https://quarto.org)"
+    footer: "🔗 [mine.quarto.pub/hello-penguins-boston](https://mine.quarto.pub/hello-penguins-boston)"
     chalkboard: true
 editor: visual
 execute: 
   echo: true
 ---
+
+# This is my title slide
 
 # Introduction
 
@@ -69,10 +77,15 @@ penguins |>
   gt()
 ```
 
+::: notes
+Here are my notes
+:::
+
 # Analysis
 
 ## Model 1 results {.smaller}
 
+::: incremental
 -   This model is awesome
 
 -   But has some drawbacks...
@@ -90,6 +103,7 @@ penguins |>
 -   But has some drawbacks...
 
 -   And here is one drawback...
+:::
 
 ## Model 2 results
 
@@ -106,7 +120,7 @@ blah
 -   item 2
 :::
 
-::: {.column width="20%"}
+::: {.column .fragment width="20%" fragment-index="2"}
 Column 2 content
 
 blah
@@ -114,7 +128,7 @@ blah
 blah
 :::
 
-::: {.column width="60%"}
+::: {.column .fragment width="60%" fragment-index="1"}
 Column 3 content
 
 hello
