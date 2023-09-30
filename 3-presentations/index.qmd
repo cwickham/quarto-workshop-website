@@ -10,4 +10,6 @@ title: "Presentations"
 <iframe class="slide-deck" src="3-presentations.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
 ```
 
+## Livecoding artifacts
 
+[hello-penguins-slides.qmd](hello-penguins-slides.qmd)
