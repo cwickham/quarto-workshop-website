@@ -14,7 +14,7 @@ format:
     slide-number: true
     chalkboard: false
     logo: "../images/logo.png"
-    theme: [../style/quarto-asa.scss, ../style/slides.scss]
+    theme: ../style/slides.scss
 ---
 
 ```{r}

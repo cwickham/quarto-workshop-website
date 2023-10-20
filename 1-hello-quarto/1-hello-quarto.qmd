@@ -14,7 +14,7 @@ format:
     slide-number: true
     chalkboard: false
     logo: "../images/logo.png"
-    theme: [../style/quarto-asa.scss, ../style/slides.scss]
+    theme: ../style/slides.scss
 ---
 
 ```{r}
@@ -27,31 +27,6 @@ options(width = 65)
 # load background packages
 library(countdown)
 ```
-
-## 
-
-While you wait for the workshop to begin, be sure you've got all the tools needed for the workshop:
-
-\
-
-::: {style="font-size: 1.6em"}
-<https://mine.quarto.pub/quarto-asa-nashville>
-:::
-
-\
-
-::: task
-
-In addition, please download and open the exercises for this session:
-
-```{r}
-#| eval: false
-#| echo: true
-
-usethis::use_course("https://tinyurl.com/nashville-exercises")
-```
-
-:::
 
 ## Code of Conduct {.smaller}
 
