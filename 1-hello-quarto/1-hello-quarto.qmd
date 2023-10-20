@@ -1,7 +1,7 @@
 ---
 title: "Hello Quarto"
 subtitle: "From R Markdown to Quarto"
-footer: "[mine.quarto.pub/nashville-asa](https://mine.quarto.pub/nashville-asa)"
+footer: "[mine.quarto.pub/quarto-asa-nashville](https://mine.quarto.pub/quarto-asa-nashville)"
 format:
   revealjs:
     author:
@@ -35,7 +35,7 @@ While you wait for the workshop to begin, be sure you've got all the tools neede
 \
 
 ::: {style="font-size: 1.6em"}
-<https://mine.quarto.pub/nashville-asa>
+<https://mine.quarto.pub/quarto-asa-nashville>
 :::
 
 \
@@ -48,7 +48,7 @@ In addition, please download and open the exercises for this session:
 #| eval: false
 #| echo: true
 
-usethis::use_course("https://bit.ly/nashville-exercises")
+usethis::use_course("https://tinyurl.com/nashville-exercises")
 ```
 
 :::
@@ -184,7 +184,7 @@ install.packages(pkg_list)
 ```{r}
 #| eval: false
 
-usethis::use_course("https://bit.ly/nashville-exercises")
+usethis::use_course("https://tinyurl.com/nashville-exercises")
 ```
 
 :::

@@ -4,7 +4,7 @@ project:
 website:
   page-navigation: true
   title: "From R Markdown to Quarto"
-  description: "ASA Traveling Workshop, Middle Tennessee Chapter"
+  description: "ASA Traveling Workshop, Mid-Tennessee Chapter"
   repo-url: https://github.com/asa-quarto/website
   page-footer:
     background: "#FEEEB6"

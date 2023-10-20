@@ -5,4 +5,8 @@
     - id: 5cd8ebd5-f65f-4397-95d0-53489055b45e
       url: 'https://andrew.quarto.pub/ohio-asa'
     - id: 7374d04d-4471-4f44-b465-92335353bf00
-      url: 'https://mine.quarto.pub/nashville-asa'
+      url: 'https://mine.quarto.pub/quarto-asa-nashville'
+    - id: 336e7d2e-6c84-4090-9d49-43a7833efd46
+      url: 'https://mine.quarto.pub/quarto-nashville'
+    - id: c503c9ea-31c1-4af4-a29f-eb243f9ecd74
+      url: 'https://mine.quarto.pub/quarto-asa-nashville'
