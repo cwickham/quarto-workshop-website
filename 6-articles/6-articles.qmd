@@ -1,20 +1,20 @@
 ---
 title: "Articles"
-subtitle: "SDSS 2023: Reproducible Documents, Websites,<br>and Books with Quarto"
-institute: "Duke University + Posit"
-author: "Dr. Mine Çetinkaya-Rundel"
-date: "2023-05-23"
-footer: "[🔗 mine.quarto.pub/quarto-sdss](https://mine.quarto.pub/quarto-sdss)"
-logo: "../images/logo.png"
+subtitle: "From R Markdown to Quarto"
+footer: "[mine.quarto.pub/quarto-asa-nashville](https://mine.quarto.pub/quarto-asa-nashville)"
 format:
   revealjs:
-    theme: ../style/slides.scss
+    author:
+      - "Mine Çetinkaya Rundel"
+      - "Andrew Bray"
+    institute:
+      - "Duke University + Posit"
+      - "UC Berkeley"
     transition: fade
     slide-number: true
-    chalkboard: true
-execute:
-  freeze: auto
-  echo: true
+    chalkboard: false
+    logo: "../images/logo.png"
+    theme: ../style/slides.scss
 ---
 
 ```{r}
@@ -99,24 +99,6 @@ Let's write an article together for JASA and showcase the following features of 
 -   Citations
 :::
 
-## Your turn
-
-::: task
-Pick up where we left off and
-
--   Add co-authors
-
--   Add another citation from a DOI
-
--   Add a cross reference to a figure, table, or section
-:::
-
-```{r}
-#| echo: false
-
-countdown(minutes = 10)
-```
-
 # Wrap up
 
 ## Learn more
@@ -126,6 +108,16 @@ countdown(minutes = 10)
 
 ```{=html}
 <iframe src="https://quarto.org/docs/journals/index.html" width="100%" height="500" style="border:2px solid #123233;" title="Quarto Journal Articles"></iframe>
+```
+:::
+
+## Coming up: Quarto manuscripts! (1.4+)
+
+::: learn-more
+[quarto.org/docs/manuscripts](https://quarto.org/docs/manuscripts/)
+
+```{=html}
+<iframe src="https://quarto.org/docs/manuscripts/" width="100%" height="500" style="border:2px solid #123233;" title="Quarto Manuscripts"></iframe>
 ```
 :::
 

@@ -4,10 +4,10 @@ title: "Articles"
 
 ## Slides
 
-[View slides in full screen](1-4-articles.html)
+[View slides in full screen](6-articles.html)
 
 ```{=html}
-<iframe class="slide-deck" src="1-4-articles.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+<iframe class="slide-deck" src="6-articles.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
 ```
 ## Exercises
 

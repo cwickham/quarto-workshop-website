@@ -40,8 +40,10 @@ Quarto is an open-source scientific and technical publishing system that offers 
 |-------------|-------------------------------------|
 | 1:30 - 3:00 |  [Presentations](3-presentations/)  |
 | 3:00 - 3:30 | 30 min break                        |
-| 3:30 - 4:30 | [Websites](4-websites/)             |
-| 4:30 - 5:00 | [Wrap-up and Q&A](7-wrap-up/)       |
+| 3:05 - 4:15 | [Websites](4-websites/)             |
+| 4:15 - 4:40 | [Books](5-books/)                   |
+| 4:40 - 4:50 | [Articles](6-articles/)             |
+| 4:50 - 5:00 | [Wrap-up and Q&A](7-wrap-up/)       |
 
 : {tbl-colwidths="\[25,35\]"}
 

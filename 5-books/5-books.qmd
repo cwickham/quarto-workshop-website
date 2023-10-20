@@ -1,15 +1,15 @@
 ---
 title: "Books"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/ohio-asa](https://andrew.quarto.pub/ohio-asa)"
+footer: "[mine.quarto.pub/quarto-asa-nashville](https://mine.quarto.pub/quarto-asa-nashville)"
 format:
   revealjs:
     author:
-      - "Andrew Bray"
       - "Mine Çetinkaya Rundel"
+      - "Andrew Bray"
     institute:
-      - "UC Berkeley"
       - "Duke University + Posit"
+      - "UC Berkeley"
     transition: fade
     slide-number: true
     chalkboard: false
@@ -49,11 +49,7 @@ Let's build a book together from all of the documents we've created so far and h
 
 -   `index.qmd` / landing page / change landing page
 
--   Callouts
-
 -   Cross references
-
--   Unnumbered chapters
 
 -   Sections
 
@@ -85,7 +81,7 @@ countdown(minutes = 15)
 -   Publish with `quarto publish`:
 
 ``` {.bash filename="Terminal"}
-quarto publish quarto-pub
+quarto publish
 ```
 
 -   Gain a `_publish.yml` that is safe to check into version control.
