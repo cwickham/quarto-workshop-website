@@ -1118,11 +1118,11 @@ pi + 1
 :::{.column width=50%}
 - Options can be moved into YAML under the `execute` key to apply to all chunks. Exceptions to that option can be set cell-by-cell.
 
-- You can also pass options via YAML to knitr through the `knitr` key[^setup].
+- You can also pass options via YAML to knitr through the `knitr` key[^setup1].
 :::
 :::
 
-[^setup]: No more ````{r setup}`!
+[^setup1]: No more ````{r setup}`!
 
 
 ## From Cell Option to YAML {auto-animate=true}
@@ -1150,13 +1150,13 @@ pi + 1
 :::{.column width=50%}
 - Options can be moved into YAML under the `execute` key to apply to all chunks. Exceptions to that option can be set cell-by-cell.
 
-- You can also pass options via YAML to knitr through the `knitr` key[^setup].
+- You can also pass options via YAML to knitr through the `knitr` key[^setup2].
 
 - You can use knitr to pass options that control your R session.
 :::
 :::
 
-[^setup]: No more ````{r setup}` :tada:
+[^setup2]: No more ````{r setup}` :tada:
 
 
 ## Example: Figures from Code {auto-animate=true}
