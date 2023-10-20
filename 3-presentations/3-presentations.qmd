@@ -1,15 +1,15 @@
 ---
 title: "Presentations"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/boston-asa](https://andrew.quarto.pub/boston-asa)"
+footer: "[mine.quarto.pub/nashville-asa](https://mine.quarto.pub/nashville-asa)"
 format:
   revealjs:
     author:
-      - "Andrew Bray"
       - "Mine Çetinkaya Rundel"
+      - "Andrew Bray"
     institute:
-      - "UC Berkeley"
       - "Duke University + Posit"
+      - "UC Berkeley"
     transition: fade
     slide-number: true
     chalkboard: false
@@ -124,19 +124,4 @@ Let's continue building our a presentation together from `hello-penguins-slides.
 
 ::: task
 Any questions / anything you'd like to review before we wrap up this module?
-:::
-
-## Let's take a break!
-
-::: columns
-::: {.column width="\"50%"}
-![](https://i.gifer.com/A7YM.gif){fig-align="center"}
-:::
-
-::: {.column width="\"50%"}
-```{r}
-#| echo: false
-countdown::countdown(15, font_size = "8rem")
-```
-:::
 :::

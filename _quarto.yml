@@ -4,9 +4,10 @@ project:
 website:
   page-navigation: true
   title: "From R Markdown to Quarto"
-  description: "ASA Traveling Workshop, Boston Chapter"
+  description: "ASA Traveling Workshop, Middle Tennessee Chapter"
   repo-url: https://github.com/asa-quarto/website
   page-footer:
+    background: "#FEEEB6"
     left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
     center:
       - icon: github
@@ -14,7 +15,7 @@ website:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
   open-graph: true
   sidebar:
-    background: "#007A33"
+    background: "#FEEEB6"
     logo: "images/logo.png"
     pinned: true
     align: center

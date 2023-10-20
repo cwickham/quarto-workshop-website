@@ -22,7 +22,7 @@ Virtual Workshop on Zoom\
 August 18, 2023\
 [Source Tag](https://github.com/asa-quarto/website/releases/tag/ohio-workshop)
 
-<https://andrew.quarto.pub/boston-asa/>\
+<https://mine.quarto.pub/nashville-asa/>\
 Boston Chapter\
 Virtual Workshop on Zoom\
 September 20, 2023\

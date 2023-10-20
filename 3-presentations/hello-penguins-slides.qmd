@@ -9,7 +9,7 @@ institute: Duke
 format: 
   revealjs:
     logo: images/quarto-logo.png
-    footer: "🔗 [mine.quarto.pub/hello-penguins-boston](https://mine.quarto.pub/hello-penguins-boston)"
+    footer: "🔗 [mine.quarto.pub/hello-penguins-nashville](https://mine.quarto.pub/hello-penguins-nashville)"
     chalkboard: true
 editor: visual
 execute: 

@@ -1,15 +1,15 @@
 ---
 title: "Documents"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/boston-asa](https://andrew.quarto.pub/boston-asa)"
+footer: "[mine.quarto.pub/nashville-asa](https://mine.quarto.pub/nashville-asa)"
 format:
   revealjs:
     author:
-      - "Andrew Bray"
       - "Mine Çetinkaya Rundel"
+      - "Andrew Bray"
     institute:
-      - "UC Berkeley"
       - "Duke University + Posit"
+      - "UC Berkeley"
     transition: fade
     slide-number: true
     chalkboard: false
@@ -273,7 +273,6 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 -   Open `hello-penguins.qmd` in RStudio.
 -   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
 -   Try out the tab-completion of any options that sound interesting.
--   Bring back your two favorite to share in chat when we return from breakout rooms.
 -   You can use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
 :::
 
@@ -475,7 +474,6 @@ Ordered list:
 ::: task
 -   Open `markdown-syntax.qmd` in RStudio.
 -   Follow the instructions in the document for how to modify it.
--   When we get back from breakout rooms, please share one thing you learned in chat.
 :::
 
 ```{r}
@@ -1221,8 +1219,8 @@ ggplot(penguins, aes(x = bill_length_mm,
 ```{{r}}
 #| fig-width: 5
 #| fig-height: 3
-#| fig-cap: "Size of penguins on three islands in the Palmer Archipelago."
-#| fig-alt: "Scatterplot showing the bill sizes of penguins across three islands."
+#| fig-cap: Size of penguins on three islands in the Palmer Archipelago.
+#| fig-alt: Scatterplot showing the bill sizes of penguins across three islands.
 
 library(palmerpenguins)
 library(ggplot2)
@@ -1284,7 +1282,6 @@ countdown(minutes = 5)
 -   Add `echo: false` to the code cell and re-render.
 -   Add more cell options by using  Ctrl + Space after the `#|` or consult the [Quarto Reference](https://quarto.org/docs/reference/cells/cells-knitr.html).
 -   Add a second code cell (you can copy + paste the first), move your cell options to the YAML, and re-render.
--   When we get back from breakout rooms, please share in chat your favorite trick when working with cell options.
 :::
 
 ```{r}

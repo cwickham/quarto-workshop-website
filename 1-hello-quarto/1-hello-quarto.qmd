@@ -1,15 +1,15 @@
 ---
 title: "Hello Quarto"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/boston-asa](https://andrew.quarto.pub/boston-asa)"
+footer: "[mine.quarto.pub/nashville-asa](https://mine.quarto.pub/nashville-asa)"
 format:
   revealjs:
     author:
-      - "Andrew Bray"
       - "Mine Çetinkaya Rundel"
+      - "Andrew Bray"
     institute:
-      - "UC Berkeley"
       - "Duke University + Posit"
+      - "UC Berkeley"
     transition: fade
     slide-number: true
     chalkboard: false
@@ -35,7 +35,7 @@ While you wait for the workshop to begin, be sure you've got all the tools neede
 \
 
 ::: {style="font-size: 1.6em"}
-<https://andrew.quarto.pub/boston-asa>
+<https://mine.quarto.pub/nashville-asa>
 :::
 
 \
@@ -48,7 +48,7 @@ In addition, please download and open the exercises for this session:
 #| eval: false
 #| echo: true
 
-usethis::use_course("https://tinyurl.com/boston-exercises")
+usethis::use_course("https://bit.ly/nashville-exercises")
 ```
 
 :::
@@ -79,16 +79,6 @@ usethis::use_course("https://tinyurl.com/boston-exercises")
 
 ::: columns
 ::: {.column width="50%"}
-**Andrew Bray**
-
--   Associate Teaching Professor\
-    Department of Statistics\
-    UC Berkeley
--   R Markdown user for 10+ years\
--   Quarto user for 1+ years
-:::
-
-::: {.column width="50%"}
 **Mine Çetinkaya-Rundel**
 
 -   Professor of the Practice\
@@ -97,6 +87,16 @@ usethis::use_course("https://tinyurl.com/boston-exercises")
 -   Developer Educator, Posit\
 -   R Markdown user for 10+ years\
 -   Quarto user for 2+ years
+:::
+
+::: {.column width="50%"}
+**Andrew Bray**
+
+-   Associate Teaching Professor\
+    Department of Statistics\
+    UC Berkeley
+-   R Markdown user for 10+ years\
+-   Quarto user for 1+ years
 :::
 :::
 
@@ -145,49 +145,19 @@ I'll **teach** you
 :::
 :::
 
-## Workshop structure {.smaller}
+## Workshop structure
 
-#### My Turn
-Lecture segments + live coding
+- My turn: 
 
-  - Please use Zoom Reactions > Raise Hand if you have a question
-    Alt+Y on PC, Opt+Y on MC
-  - Feel free to just watch, take notes, browse docs, or tinker around in RStudio.
+  - Lecture segments + live coding
+  - Feel free to just watch, take notes, browse docs, or tinker around in RStudio
 
-#### Our Turn
-Live coding + follow along
+- Our Turn: 
 
-  - Please try to follow along in RStudio during the live coding.
-  - If problems crop up for you, please put them in chat or hold on.
+  - Live coding + follow along
+  - If problems crop up for you, ask away, but I might ask you to hold on
 
-#### Your Turn
-Practice exercises for you
-
-  - Breakout rooms of size ~3
-  - I'll stay in room 1. Raise hand and I'll come to you.
-
-
-## Eight hours on zoom! {.smaller}
-
-:::{.columns}
-
-:::{.column width="50%"}
-
-![](https://media.giphy.com/media/7sThmP82L5v20/giphy.gif)
-
-:::
-
-:::{.column width="50%"}
-
-Ideas for keeping it real
-
-1. Turn your camera on when you can.
-2. 15 min breaks after every segment. Turn off camera and leave your desk.
-3. Take longer breaks if needed.
-
-:::
-
-:::
+- Your Turn: Practice exercises for you
 
 ## Checking in one more time {.smaller}
 
@@ -214,7 +184,7 @@ install.packages(pkg_list)
 ```{r}
 #| eval: false
 
-usethis::use_course("https://tinyurl.com/boston-exercises")
+usethis::use_course("https://bit.ly/nashville-exercises")
 ```
 
 :::
@@ -533,26 +503,6 @@ countdown(minutes = 3)
 Any questions / anything you'd like to review before we wrap up this module?
 :::
 
-## Let's take a break!
-
-:::{.columns}
-
-:::{.column width="50%}
-
-![](https://i.gifer.com/A7YM.gif){fig-align="center"}
-
-:::
-
-:::{.column width="50%}
-
-```{r}
-#| echo: false
-countdown::countdown(15, font_size = "8rem")
-```
-
-:::
-:::
-
 ## Your turn
 
 ::: task
@@ -572,6 +522,6 @@ Use the visual editor for the next steps.
 ```{r}
 #| echo: false
 
-countdown(minutes = 5)
+countdown(minutes = 10)
 ```
 
