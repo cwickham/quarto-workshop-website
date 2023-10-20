@@ -885,6 +885,22 @@ Look - a squirrel!
 \
 :::
 
+## Your turn
+
+::: task
+-   Open `callout-boxes.qmd` and render the document.
+-   Change the type of the first callout box and then re-render. Also try adding attributes inside `{ }` to learn what they do.
+    - `icon=true` or `icon=false`.
+    - `appearance="simple"` (can also try `"minimal"` and `"default"`).
+-   Make the second callout box collapsible.
+-   Change the format to PDF and re-render.
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 5)
+```
 
 # Code
 
@@ -1256,24 +1272,6 @@ ggplot(penguins, aes(x = bill_length_mm,
 . . .
 
 > Save time/code by moving figure sizing defaults up to the YAML.
-
-## Your turn
-
-::: task
--   Open `callout-boxes.qmd` and render the document.
--   Change the type of the first callout box and then re-render. Also try adding attributes inside `{ }` to learn what they do.
-    - `icon=true` or `icon=false`.
-    - `appearance="simple"` (can also try `"minimal"` and `"default"`).
--   Make the second callout box collapsible.
--   Change the format to PDF and re-render.
-:::
-
-```{r}
-#| echo: false
-
-countdown(minutes = 5)
-```
-
 
 ## Your turn
 
