@@ -4,10 +4,10 @@ project:
 website:
   page-navigation: true
   title: "From R Markdown to Quarto"
-  description: "ASA Traveling Workshop, Boston Chapter"
+  description: "ASA Traveling Workshop, Northeast Illinois Chapter"
   repo-url: https://github.com/asa-quarto/website
   page-footer:
-    left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
+    left: "&copy; Copyright 2024, Mine Çetinkaya-Rundel + Andrew Bray"
     center:
       - icon: github
         href: https://github.com/orgs/asa-quarto/repositories
