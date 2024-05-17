@@ -1,7 +1,7 @@
 ---
 title: "Documents"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/boston-asa](https://andrew.quarto.pub/boston-asa)"
+footer: "[andrew.quarto.pub/nic-asa](https://andrew.quarto.pub/nic-asa)"
 format:
   revealjs:
     author:
@@ -198,7 +198,7 @@ There are multiple ways of formatting valid YAML:
 format: html
 ```
 
--   Valid: There are 2 spaces a new line and no trailing `:`
+-   Valid: There is a new line, 2 spaces, and no trailing `:`
 
 ``` yaml
 format:
@@ -273,12 +273,13 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 -   Open `hello-penguins.qmd` in RStudio.
 -   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
 -   Try out the tab-completion of any options that sound interesting.
--   Bring back your two favorite to share in chat when we return from breakout rooms.
+<!-- -   Bring back your two favorite to share in chat when we return from breakout rooms. -->
 -   You can use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
 :::
 
 ```{r}
 #| echo: false
+#| 
 
 countdown(minutes = 5)
 ```
@@ -1036,7 +1037,7 @@ Control how the code is executed with options.
 \
 \
 
-[Don't forget to use cmd-space to see the available options!]{style="align: center"}
+[Don't forget to use ctrl-space to see the available options!]{style="align: center"}
 
 ![](images/code-yaml-intelligence.png){width="100px"}
 
@@ -1284,7 +1285,7 @@ countdown(minutes = 5)
 -   Add `echo: false` to the code cell and re-render.
 -   Add more cell options by using  Ctrl + Space after the `#|` or consult the [Quarto Reference](https://quarto.org/docs/reference/cells/cells-knitr.html).
 -   Add a second code cell (you can copy + paste the first), move your cell options to the YAML, and re-render.
--   When we get back from breakout rooms, please share in chat your favorite trick when working with cell options.
+<!-- -   When we get back from breakout rooms, please share in chat your favorite trick when working with cell options. -->
 :::
 
 ```{r}
@@ -1292,3 +1293,65 @@ countdown(minutes = 5)
 
 countdown(minutes = 7)
 ```
+
+# Parameterized Reports
+
+## Parameterized Reports
+
+#### Use Case
+
+You have a document (pdf, html file, presentation) that you will need to produce many times with only tiny changes.
+
+#### Approach
+
+1. Recode those changes as parameters.
+2. Pass parameters during the render process using a script
+   - Shell script
+   - Python script
+   - R script
+
+## Params syntax
+
+Place parameters in YAML under the `params` key.
+
+```yaml
+---
+params:
+  alpha: 0.1
+  ratio: 0.1
+---
+```
+
+You can now access the values inside the `params` R list.
+
+```{r}
+#| eval: false
+params$alpha
+```
+
+```{r}
+#| echo: false
+0.1
+```
+
+
+## Our Turn
+
+:::{.task}
+1. Open `parameterized-reports/grade-report.qmd`.
+2. Filter the data set to only use the data of `"Rohan Prakesh"`.
+3. Make that a variable accessible through `params`.
+4. Add an inline reference to the student.
+5. Run `parameterized-reports/make-grade-reports.r`.
+:::
+
+## Your Turn
+
+This one is a real challenge!
+
+:::{.task}
+1. Create a second qmd called `annual-grade-report.qmd`.
+2. Include a few plots that show the aggregate grade performance across all students.
+3. Parameterize the report in terms of `year`.
+4. Modify the code from `make-grade-reports.r` to produce two grade reports: one for 2023 and one for 2024.
+:::
