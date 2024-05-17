@@ -268,7 +268,8 @@ Sit back and enjoy!
 ## Your turn
 
 ::: task
-Open `hello-penguins.qmd` in RStudio and with the `visual editor` . . .
+Open `hello-penguins.qmd` in RStudio and . . .
+<!-- Open `hello-penguins.qmd` in RStudio and with the `visual editor` . . . -->
 
 1. Render the document.
 2. Update your name and re-render.
