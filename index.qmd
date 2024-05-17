@@ -1,6 +1,6 @@
 ---
 title: "From R Markdown to Quarto"
-subtitle: "ASA Travelling Workshop, Boston Chapter for New England"
+subtitle: "ASA Travelling Workshop, Northeastern Illinois Chapter"
 format:
   html:
     toc: false
