@@ -48,7 +48,7 @@ format:
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
-    toc: true
+    toc: false
 
 execute:
   freeze: false
