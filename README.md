@@ -34,6 +34,12 @@ Nashville, Tennessee\
 October 20, 2023\
 [Source Tag](https://github.com/asa-quarto/website/releases/tag/nashville-workshop)
 
+<https://andrew.quarto.pub/nic-asa/>\
+Northeastern Illinois Chapter\
+Northbrook, Illinois\
+May 17, 2024\
+[Source Tag](https://github.com/asa-quarto/website/releases/tag/northeast-illinois-workshop)
+
 ## Abstract
 
 This workshop is designed for those who want to take their R Markdown skills and expertise and apply them in Quarto, the next generation of R Markdown. Quarto is an open-source scientific and technical publishing system that offers multilingual programming language support to create dynamic and static documents, books, presentations, blogs, and other online resources. In this workshop you will learn how to apply your reproducible authoring skills to the Quarto format and learn about new tools and workflows for authoring with Quarto in RStudio. You will learn to create static documents as well as slide presentations. The workshop will also introduce you to Quarto projects which you can use to build websites and write blogs and books. Finally, you will learn various ways to deploy and publish your Quarto projects on the web.
