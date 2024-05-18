@@ -45,7 +45,7 @@ library(countdown)
 ## Our turn {.smaller}
 
 ::: task
-Let's build a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:
+Let's build a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations.
 
 -   Hierarchy, headers, and document outline
 
@@ -97,6 +97,41 @@ Let's continue building our a presentation together from `hello-penguins-slides.
 
 -   Speaker notes
 :::
+
+## One last thing: Templates
+
+> If you want to recycle formatting / images / functionality from one deck to the other, you can put together a [custom format](https://quarto.org/docs/extensions/listing-revealjs.html).
+
+. . .
+
+You can use someoneelse's template by running
+
+```bash
+quarto add <github-accnt>/<repo-name>
+```
+
+## Our Turn
+
+:::task
+- In the same directory as your slides qmd, run `quarto add qmdr/qmdrslides` at the terminal.
+- Say yes to the prompts.
+- Change the format of your slides to `qmdrslides-revealjs`
+:::
+
+## Your Turn
+
+:::task
+- Survey the community templates hosted at <https://quarto.org/docs/extensions/listing-revealjs.html>
+- Select one to add to your document using `quarto add <github-accnt>/<repo-name>` at the terminal.
+- Change the format of your slides to `<repo-name>-revealjs`.
+- Render!
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 15)
+```
 
 # Wrap up
 
