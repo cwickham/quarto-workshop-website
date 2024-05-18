@@ -5,16 +5,16 @@ footer: "[andrew.quarto.pub/nic-asa](https://andrew.quarto.pub/nic-asa)"
 format:
   revealjs:
     author:
-      - "Andrew Bray"
       - "Mine Çetinkaya Rundel"
+      - "Andrew Bray"
     institute:
-      - "UC Berkeley"
       - "Duke University + Posit"
+      - "UC Berkeley"
     transition: fade
     slide-number: true
     chalkboard: false
     logo: "../images/logo.png"
-    theme: [../style/quarto-asa.scss, ../style/slides.scss]
+    theme: ../style/slides.scss
 ---
 
 ```{r}
@@ -53,6 +53,7 @@ usethis::use_course("https://tinyurl.com/nic-exercises")
 
 :::
 
+
 ## Code of Conduct {.smaller}
 
 > The American Statistical Association (ASA) is committed to providing an atmosphere in which personal respect and intellectual growth are valued and the free expression and exchange of ideas are encouraged. Consistent with this commitment, it is the policy of the ASA that all participants in ASA activities enjoy a welcoming environment free from unlawful discrimination, harassment, and retaliation. We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to, members of any race, ethnicity, culture, national origin, color, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
@@ -79,6 +80,7 @@ usethis::use_course("https://tinyurl.com/nic-exercises")
 
 ::: columns
 ::: {.column width="50%"}
+
 **Andrew Bray**
 
 -   Associate Teaching Professor\
@@ -88,16 +90,17 @@ usethis::use_course("https://tinyurl.com/nic-exercises")
 -   Quarto user for 2+ years
 :::
 
-<!-- ::: {.column width="50%"} -->
-<!-- **Mine Çetinkaya-Rundel** -->
+::: {.column width="50%"}
+**Mine Çetinkaya-Rundel**
 
-<!-- -   Professor of the Practice\ -->
-<!--     Department of Statistical Science\ -->
-<!--     Duke University -->
-<!-- -   Developer Educator, Posit\ -->
-<!-- -   R Markdown user for 10+ years\ -->
-<!-- -   Quarto user for 2+ years -->
-<!-- ::: -->
+-   Professor of the Practice\
+    Department of Statistical Science\
+    Duke University
+-   Developer Educator, Posit\
+-   R Markdown user for 11+ years\
+-   Quarto user for 3+ years
+:::
+
 :::
 
 ## About you
@@ -145,49 +148,19 @@ I'll **teach** you
 :::
 :::
 
-## Workshop structure {.smaller}
+## Workshop structure
 
-#### My Turn
-Lecture segments + live coding
+- My turn: 
 
-  - Please use Zoom Reactions > Raise Hand if you have a question
-    Alt+Y on PC, Opt+Y on MC
-  - Feel free to just watch, take notes, browse docs, or tinker around in RStudio.
+  - Lecture segments + live coding
+  - Feel free to just watch, take notes, browse docs, or tinker around in RStudio
 
-#### Our Turn
-Live coding + follow along
+- Our Turn: 
 
-  - Please try to follow along in RStudio during the live coding.
-  - If problems crop up for you, please put them in chat or hold on.
+  - Live coding + follow along
+  - If problems crop up for you, ask away, but I might ask you to hold on
 
-#### Your Turn
-Practice exercises for you
-
-  - Breakout rooms of size ~3
-  - I'll stay in room 1. Raise hand and I'll come to you.
-
-
-## Eight hours on zoom! {.smaller}
-
-:::{.columns}
-
-:::{.column width="50%"}
-
-![](https://media.giphy.com/media/7sThmP82L5v20/giphy.gif)
-
-:::
-
-:::{.column width="50%"}
-
-Ideas for keeping it real
-
-1. Turn your camera on when you can.
-2. 15 min breaks after every segment. Turn off camera and leave your desk.
-3. Take longer breaks if needed.
-
-:::
-
-:::
+- Your Turn: Practice exercises for you
 
 ## Checking in one more time {.smaller}
 
@@ -539,26 +512,6 @@ countdown(minutes = 3)
 Any questions / anything you'd like to review before we wrap up this module?
 :::
 
-## Let's take a break!
-
-:::{.columns}
-
-:::{.column width="50%}
-
-![](https://i.gifer.com/A7YM.gif){fig-align="center"}
-
-:::
-
-:::{.column width="50%}
-
-```{r}
-#| echo: false
-countdown::countdown(15, font_size = "8rem")
-```
-
-:::
-:::
-
 ## Your turn
 
 ::: task
@@ -578,6 +531,6 @@ Use the visual editor for the next steps.
 ```{r}
 #| echo: false
 
-countdown(minutes = 5)
+countdown(minutes = 10)
 ```
 

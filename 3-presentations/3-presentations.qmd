@@ -5,16 +5,16 @@ footer: "[andrew.quarto.pub/nic-asa](https://andrew.quarto.pub/nic-asa)"
 format:
   revealjs:
     author:
-      - "Andrew Bray"
       - "Mine Çetinkaya Rundel"
+      - "Andrew Bray"
     institute:
-      - "UC Berkeley"
       - "Duke University + Posit"
+      - "UC Berkeley"
     transition: fade
     slide-number: true
     chalkboard: false
     logo: "../images/logo.png"
-    theme: [../style/quarto-asa.scss, ../style/slides.scss]
+    theme: ../style/slides.scss
 ---
 
 ```{r}
@@ -159,19 +159,4 @@ countdown(minutes = 15)
 
 ::: task
 Any questions / anything you'd like to review before we wrap up this module?
-:::
-
-## Let's take a break!
-
-::: columns
-::: {.column width="\"50%"}
-![](https://i.gifer.com/A7YM.gif){fig-align="center"}
-:::
-
-::: {.column width="\"50%"}
-```{r}
-#| echo: false
-countdown::countdown(15, font_size = "8rem")
-```
-:::
 :::

@@ -5,16 +5,16 @@ footer: "[andrew.quarto.pub/nic-asa](https://andrew.quarto.pub/nic-asa)"
 format:
   revealjs:
     author:
-      - "Andrew Bray"
       - "Mine Çetinkaya Rundel"
+      - "Andrew Bray"
     institute:
-      - "UC Berkeley"
       - "Duke University + Posit"
+      - "UC Berkeley"
     transition: fade
     slide-number: true
     chalkboard: false
     logo: "../images/logo.png"
-    theme: [../style/quarto-asa.scss, ../style/slides.scss]
+    theme: ../style/slides.scss
 ---
 
 ```{r}
@@ -642,7 +642,9 @@ profile:
 
     -   `website`: Websites (and blogs)
 
-    -   `books`: Books
+    -   `book`: Books
+
+    -   `manuscript`: Manuscripts (Quarto 1.4+)
 
 ## Quarto websites
 

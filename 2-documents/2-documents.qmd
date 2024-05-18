@@ -5,16 +5,16 @@ footer: "[andrew.quarto.pub/nic-asa](https://andrew.quarto.pub/nic-asa)"
 format:
   revealjs:
     author:
-      - "Andrew Bray"
       - "Mine Çetinkaya Rundel"
+      - "Andrew Bray"
     institute:
-      - "UC Berkeley"
       - "Duke University + Posit"
+      - "UC Berkeley"
     transition: fade
     slide-number: true
     chalkboard: false
     logo: "../images/logo.png"
-    theme: [../style/quarto-asa.scss, ../style/slides.scss]
+    theme: ../style/slides.scss
 ---
 
 ```{r}
@@ -273,7 +273,6 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 -   Open `hello-penguins.qmd` in RStudio.
 -   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
 -   Try out the tab-completion of any options that sound interesting.
-<!-- -   Bring back your two favorite to share in chat when we return from breakout rooms. -->
 -   You can use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
 :::
 
@@ -476,7 +475,6 @@ Ordered list:
 ::: task
 -   Open `markdown-syntax.qmd` in RStudio.
 -   Follow the instructions in the document for how to modify it.
--   When we get back from breakout rooms, please share one thing you learned in chat.
 :::
 
 ```{r}
@@ -888,6 +886,22 @@ Look - a squirrel!
 \
 :::
 
+## Your turn
+
+::: task
+-   Open `callout-boxes.qmd` and render the document.
+-   Change the type of the first callout box and then re-render. Also try adding attributes inside `{ }` to learn what they do.
+    - `icon=true` or `icon=false`.
+    - `appearance="simple"` (can also try `"minimal"` and `"default"`).
+-   Make the second callout box collapsible.
+-   Change the format to PDF and re-render.
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 5)
+```
 
 # Code
 
@@ -1105,11 +1119,11 @@ pi + 1
 :::{.column width=50%}
 - Options can be moved into YAML under the `execute` key to apply to all chunks. Exceptions to that option can be set cell-by-cell.
 
-- You can also pass options via YAML to knitr through the `knitr` key[^setup].
+- You can also pass options via YAML to knitr through the `knitr` key[^setup1].
 :::
 :::
 
-[^setup]: No more ````{r setup}`!
+[^setup1]: No more ````{r setup}`!
 
 
 ## From Cell Option to YAML {auto-animate=true}
@@ -1137,13 +1151,13 @@ pi + 1
 :::{.column width=50%}
 - Options can be moved into YAML under the `execute` key to apply to all chunks. Exceptions to that option can be set cell-by-cell.
 
-- You can also pass options via YAML to knitr through the `knitr` key[^setup].
+- You can also pass options via YAML to knitr through the `knitr` key[^setup2].
 
 - You can use knitr to pass options that control your R session.
 :::
 :::
 
-[^setup]: No more ````{r setup}` :tada:
+[^setup2]: No more ````{r setup}` :tada:
 
 
 ## Example: Figures from Code {auto-animate=true}
@@ -1222,8 +1236,8 @@ ggplot(penguins, aes(x = bill_length_mm,
 ```{{r}}
 #| fig-width: 5
 #| fig-height: 3
-#| fig-cap: "Size of penguins on three islands in the Palmer Archipelago."
-#| fig-alt: "Scatterplot showing the bill sizes of penguins across three islands."
+#| fig-cap: Size of penguins on three islands in the Palmer Archipelago.
+#| fig-alt: Scatterplot showing the bill sizes of penguins across three islands.
 
 library(palmerpenguins)
 library(ggplot2)
@@ -1263,29 +1277,10 @@ ggplot(penguins, aes(x = bill_length_mm,
 ## Your turn
 
 ::: task
--   Open `callout-boxes.qmd` and render the document.
--   Change the type of the first callout box and then re-render. Also try adding attributes inside `{ }` to learn what they do.
-    - `icon=true` or `icon=false`.
-    - `appearance="simple"` (can also try `"minimal"` and `"default"`).
--   Make the second callout box collapsible.
--   Change the format to PDF and re-render.
-:::
-
-```{r}
-#| echo: false
-
-countdown(minutes = 5)
-```
-
-
-## Your turn
-
-::: task
 -   Open `code-cells.qmd` and render the document.
 -   Add `echo: false` to the code cell and re-render.
 -   Add more cell options by using  Ctrl + Space after the `#|` or consult the [Quarto Reference](https://quarto.org/docs/reference/cells/cells-knitr.html).
 -   Add a second code cell (you can copy + paste the first), move your cell options to the YAML, and re-render.
-<!-- -   When we get back from breakout rooms, please share in chat your favorite trick when working with cell options. -->
 :::
 
 ```{r}

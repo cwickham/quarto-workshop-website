@@ -14,7 +14,7 @@ website:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
   open-graph: true
   sidebar:
-    background: "#007A33"
+    background: "#FEEEB6"
     logo: "images/logo.png"
     pinned: true
     align: center
@@ -43,8 +43,9 @@ website:
 
 format:
   html:
-    theme:
-      light: style/quarto-asa.scss
+    theme: 
+      light: style/quarto-asa-light.scss
+      dark: style/quarto-asa-dark.scss
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
