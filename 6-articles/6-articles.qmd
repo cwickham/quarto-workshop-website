@@ -1,7 +1,6 @@
 ---
 title: "Articles"
 subtitle: "From R Markdown to Quarto"
-footer: "[mine.quarto.pub/quarto-asa-nashville](https://mine.quarto.pub/quarto-asa-nashville)"
 format:
   revealjs:
     author:

@@ -50,6 +50,8 @@ format:
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
     toc: false
+  revealjs:
+    footer: "[andrew.quarto.pub/nic-asa](https://andrew.quarto.pub/nic-asa)"
 
 execute:
   freeze: false

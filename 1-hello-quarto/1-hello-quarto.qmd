@@ -1,7 +1,6 @@
 ---
 title: "Hello Quarto"
 subtitle: "From R Markdown to Quarto"
-footer: "[andrew.quarto.pub/nic-asa](https://andrew.quarto.pub/nic-asa)"
 format:
   revealjs:
     author:
