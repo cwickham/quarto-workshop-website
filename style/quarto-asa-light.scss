@@ -4,13 +4,27 @@
 
 $font-family: "Atkinson Hyperlegible", sans-serif;
 
-$primary-color: #FEEEB6;
-$secondary-color: #1770b9;
+$primary-color: #dfd6e1;
+$secondary-color: #6c4572;
 $link-color: $secondary-color;
 $hover-color: lighten($link-color, 10%);
 $sidebar-bg: $primary-color;
 
 /*-- scss:rules --*/
+
+$sidebar-hl: $secondary-color;
+$sidebar-hl-hover: darken($sidebar-hl, 10%);
+
+.sidebar a{
+  color: $sidebar-hl;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+
+  &:hover{
+    color: $sidebar-hl-hover;
+    border-bottom: 1px solid $sidebar-hl-hover;
+  }
+}
 
 a{
   color: $link-color;

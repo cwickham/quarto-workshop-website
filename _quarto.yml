@@ -15,7 +15,6 @@ website:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
   open-graph: true
   sidebar:
-    background: "#FEEEB6"
     pinned: true
     align: center
     style: docked
