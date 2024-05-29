@@ -1,19 +1,7 @@
 ---
 title: "Wrap-up"
 subtitle: "From R Markdown to Quarto"
-format:
-  revealjs:
-    author:
-      - "Mine Çetinkaya Rundel"
-      - "Andrew Bray"
-    institute:
-      - "Duke University + Posit"
-      - "UC Berkeley"
-    transition: fade
-    slide-number: true
-    chalkboard: false
-    logo: "../images/logo.png"
-    theme: ../style/slides.scss
+format: revealjs
 ---
 
 ```{r}
@@ -77,9 +65,7 @@ orchestrates each step of rendering
 
 ## Thank you! {background-image="images/thank-you.png"}
 
-🐘 [https://fosstodon.org/\@minecr](https://fosstodon.org/@minecr)
-
-🐦 [\@minebocek](https://twitter.com/minebocek)
+<!-- Social Links? -->
 
 ## Questions
 

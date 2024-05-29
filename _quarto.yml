@@ -1,21 +1,21 @@
 project:
   type: website
+  render:
+    - "*.qmd"
 
 website:
   page-navigation: true
-  title: "From R Markdown to Quarto"
-  description: "ASA Traveling Workshop, Northeast Illinois Chapter"
-  repo-url: https://github.com/asa-quarto/website
+  title: "Intro to Quarto"
+  description: "Intro to Quarto Cascadia R Conf Workshop 2024"
+  repo-url: https://github.com/cwickham/quarto-workshop-website
   page-footer:
-    left: "&copy; Copyright 2024, Mine Çetinkaya-Rundel + Andrew Bray"
     center:
       - icon: github
-        href: https://github.com/orgs/asa-quarto/repositories
+        href: https://github.com/cwickham/quarto-workshop-website
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
   open-graph: true
   sidebar:
     background: "#FEEEB6"
-    logo: "images/logo.png"
     pinned: true
     align: center
     style: docked
@@ -27,20 +27,12 @@ website:
       - href: pre-work.qmd
         text: Pre-work
       - text: "---"
-      - section: "In the Morning"
-        contents:
-          - href: 1-hello-quarto/index.qmd
-            text: Hello Quarto
-          - href: 2-documents/index.qmd
-            text: Documents
-      - text: "---"
-      - section: "In the Afternoon"
-        contents:
-          - href: 3-presentations/index.qmd
-            text: Presentations
-          - href: 4-websites/index.qmd
-            text: Websites
+      - href: 1-hello-quarto/index.qmd
+        text: Hello Quarto
+      - href: 2-documents/index.qmd
+        text: Documents
 
+    
 format:
   html:
     theme: 
@@ -51,8 +43,14 @@ format:
     mainfont: "Atkinson Hyperlegible"
     toc: false
   revealjs:
-    footer: "[andrew.quarto.pub/nic-asa](https://andrew.quarto.pub/nic-asa)"
+    footer: "[charlotte.quarto.pub/cascadia](https://charlotte.quarto.pub/cascadia)"
+    author: Charlotte Wickham
+    institute: Posit, PBC
+    transition: fade
+    slide-number: true
+    chalkboard: false
+    theme: style/slides.scss
 
 execute:
-  freeze: false
+  freeze: auto
   echo: true

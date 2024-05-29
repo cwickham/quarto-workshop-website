@@ -1,0 +1,15 @@
+{
+  "hash": "c83a63672835748a267a2f13655cdc5b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Pre-workshop instructions\"\nformat: html\n---\n\n\n\n\nPrior to the workshop, please complete the following steps:\n\n#### 1. Software\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\n-   R 4.2.3 or above: <https://cran.r-project.org>\n-   RStudio 2023.09.0+448 or above: <https://posit.co/download/rstudio-desktop>\n-   Quarto 1.4 or above: <https://quarto.org/docs/get-started>\n\n#### 2. R Packages\n\nInstall the following packages:\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\npkg_list <- c(\"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \n              \"quarto\", \"here\", \"usethis\")\ninstall.packages(pkg_list)\n```\n:::\n\n\n\n\n#### 3. Exercises\n\nDownload and open the exercises for this session. The easiest way is to run this line of R code at the console in RStudio.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nusethis::use_course(\"https://tinyurl.com/nic-exercises\")\n```\n:::\n\n\n\n\nIf that doesn't work, you can download a zip file of the exercises [here](https://github.com/quarto-asa/exercises), then open the directory. The qmd files can be opened in RStudio.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
