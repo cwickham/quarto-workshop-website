@@ -27,10 +27,12 @@ website:
       - href: pre-work.qmd
         text: Pre-work
       - text: "---"
-      - href: 1-hello-quarto/index.qmd
-        text: Hello Quarto
-      - href: 2-documents/index.qmd
-        text: Documents
+      - section: Modules
+        contents:
+        - href: 1-hello-quarto/index.qmd
+          text: Hello Quarto
+        - href: 2-documents/index.qmd
+          text: Documents
 
     
 format:
