@@ -19,10 +19,14 @@ library(countdown)
 
 While you wait for the workshop to begin, be sure you've got all the tools needed for the workshop:
 
-\
+::: {style="float:right"}
+{{< qrcode https://charlotte.quarto.pub/cascadia >}}
+:::
 
-::: {style="font-size: 1.6em"}
-<https://charlotte.quarto.pub/cascadia>
+\ 
+
+::: {style="font-size: 1.5em"}
+<https://charlotte.quarto.pub/cascadia> 
 :::
 
 \
