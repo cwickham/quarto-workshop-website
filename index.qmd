@@ -13,15 +13,17 @@ Quarto is a publishing system for weaving together code and narrative to create 
 
 **Knowledge Prerequisites:** You should be comfortable opening, editing and navigating files in RStudio. You should have some experience with the R language, but no specific experience in any packages is required.
 
-**Pre-Installations:** Recent version of R, RStudio, and Quarto CLI. R packages: tidyverse, gt, palmerpenguins, quarto. Detailed instructions provided prior to the workshop.
+**Pre-Installations:** Recent version of R, RStudio, and Quarto CLI. R packages: tidyverse, gt, palmerpenguins, quarto. Detailed instructions at [Pre-work](pre-work.qmd).
 
 ## Schedule
 
-| Time          | Module                            |
-|---------------|-----------------------------------|
-| 9:00 - 10:30  | [Hello Quarto](1-hello-quarto/)   |
-| 10:30 - 11:00 | 30 min break                      |
-| 11:00 - 12:00 | [Documents](2-documents/)         |
+| Time          | Module                                                         |
+|---------------|----------------------------------------------------------------|
+| 9:00 - 10:00  | [Hello Quarto](1-hello-quarto/)                                |
+| 10:00 - 10:30 | [Documents: YAML + Markdown Basics](2-yaml-markdown-basics/)   |
+| 10:30 - 11:00 | 30 min break                                                   |
+| 11:00 - 11:50 | [Documents: Figures/Tables + Code](3-figures-tables-code/)     |
+| 11:50 - 12:00 | [Wrap Up](4-wrap-up/)                                          |
 
 : {tbl-colwidths="\[25,35\]"}
 

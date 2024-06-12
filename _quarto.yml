@@ -3,6 +3,8 @@ project:
   render:
     - "*.qmd"
     - "!exercises/"
+  resources: 
+    - "exercises/"
 
 website:
   page-navigation: true
@@ -31,9 +33,12 @@ website:
         contents:
         - href: 1-hello-quarto/index.qmd
           text: Hello Quarto
-        - href: 2-documents/index.qmd
-          text: Documents
-
+        - href: 2-yaml-markdown-basics/index.qmd
+          text: YAML + Markdown Basics
+        - href: 3-figures-tables-code/index.qmd
+          text: Figures/Tables + Code
+        - href: 4-wrap-up/index.qmd
+          text: Wrap Up
     
 format:
   html:

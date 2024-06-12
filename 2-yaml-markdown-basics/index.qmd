@@ -1,0 +1,13 @@
+---
+title: "Documents: YAML + Markdown Basics"
+format: html
+---
+
+## Slides
+
+[View slides in full screen](2-yaml-markdown-basics.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="2-yaml-markdown-basics.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+

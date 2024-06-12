@@ -1,0 +1,467 @@
+---
+title: "Documents: YAML + Markdown Basics"
+subtitle: "Intro Quarto @ Cascadia R Conf"
+format: 
+  revealjs:
+    code-overflow: wrap
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+# set width of code output
+options(width = 65)
+
+# load background packages
+library(countdown)
+library(gt)
+```
+
+## {data-visibility="hidden"}
+
+::: task
+Where does the name "Quarto" come from?
+:::
+
+. . .
+
+```{=html}
+<iframe src="https://en.wikipedia.org/wiki/Quarto" title = "Quarto on Wikipedia" frameborder="1" height="400" width="900"></iframe>
+```
+::: aside
+Source: <https://en.wikipedia.org/wiki/Quarto>
+:::
+
+# Anatomy of a Quarto document
+
+## Components
+
+1.  Metadata: YAML
+
+2.  Text: Markdown
+
+3.  Code: Executed via `knitr` or `jupyter`
+
+. . .
+
+**Weave it all together**, and you have beautiful, powerful, and useful outputs!
+
+## Literate programming {.smaller data-visibility="hidden"}
+
+Literate programming is writing out the program logic in a human language with included code snippets (separated by a primitive markup) and macros.
+
+````         
+---
+title: "ggplot2 demo"
+date: "5/19/2023"
+format: html
+---
+
+## MPG
+
+There is a relationship between city and highway mileage.
+
+```{{r}}
+#| label: fig-mpg
+
+library(ggplot2)
+
+ggplot(mpg, aes(x = cty, y = hwy)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+```
+````
+
+::: aside
+Source: <https://en.wikipedia.org/wiki/Literate_programming>
+:::
+
+# Metadata
+
+## YAML
+
+"Yet Another Markup Language" or "YAML Ain't Markup Language" is used to provide document level metadata ...
+
+. . .
+
+... in key-value pairs,
+
+. . .
+
+... that can nest,
+
+. . .
+
+... are fussy about indentation,
+
+. . .
+
+... and are kept between `---`.
+
+
+``` yaml
+---
+key: value
+---
+```
+
+## Example: Output options
+
+``` yaml
+---
+format: something
+---
+```
+
+. . .
+
+<br>
+
+``` yaml
+---
+format: html
+---
+```
+
+``` yaml
+---
+format: pdf
+---
+```
+
+``` yaml
+---
+format: revealjs
+---
+```
+
+## Example: Indented nesting
+
+Indentation matters!
+
+``` yaml
+---
+format: 
+  html:
+    toc: true
+    code-fold: true
+---
+```
+
+## Fussing with YAML (invalid) {.smaller}
+
+-   Invalid: No space after `:`
+
+``` yaml
+---
+format:html
+---
+```
+
+-   Invalid: Read as missing
+
+``` yaml
+---
+format:
+html
+---
+```
+
+-   Valid, but needs next object
+
+``` yaml
+---
+format: 
+  html:
+---
+```
+
+## Fussing with YAML (valid) {.smaller}
+
+There are multiple ways of formatting valid YAML:
+
+-   Valid: There's a space after `:`
+
+``` yaml
+format: html
+```
+
+-   Valid: There is a new line, 2 spaces, and no trailing `:`
+
+``` yaml
+format:
+  html
+```
+
+-   Valid: `format: html` with additional options made with proper indentation
+
+``` yaml
+format: 
+  html:
+    toc: true
+```
+
+## Why YAML?
+
+To avoid manually typing out all the options, every time when rendering via the CLI:
+
+. . .
+
+``` bash
+quarto render document.qmd --to html
+```
+
+<br>
+
+. . .
+
+``` bash
+quarto render document.qmd --to html -M code-fold:true
+```
+
+<br>
+
+. . .
+
+``` bash
+quarto render document.qmd --to html -M code-fold:true -P alpha:0.2 -P ratio:0.3
+```
+
+## Quarto linting
+
+Lint, or a linter, is a static code analysis tool used to flag programming errors, bugs, stylistic errors and suspicious constructs.
+
+![](images/lint-rstudio.png){width=80%}
+
+::: aside
+Source: <https://en.wikipedia.org/wiki/Lint_(software)>
+:::
+
+## Quarto YAML Intelligence
+
+RStudio + VSCode provide rich tab-completion - start a word and tab to complete, or <kbd>`Ctrl + space`</kbd> to see all available options.
+
+<br>
+
+![](images/quarto-tab-complete.png){fig-align="center" width="600"}
+
+## Your turn
+
+::: task
+-   Open `hello-penguins.qmd` in RStudio.
+-   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
+-   Try out the tab-completion of any options that sound interesting.
+-   You can use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
+-   Share one you tried with your neighbor.
+:::
+
+```{r}
+#| echo: false
+#| 
+
+countdown(minutes = 5)
+```
+
+## List of valid YAML fields
+
+-   Many YAML fields are common across various outputs
+
+-   But also each output type has its own set of valid YAML fields and options
+
+-   Definitive list: [quarto.org/docs/reference/formats/html](https://quarto.org/docs/reference/formats/html.html)
+
+# Text
+
+<https://quarto.org/docs/authoring/markdown-basics.html> 
+
+## Text Formatting
+
++-------------------------------+-------------------------------+
+| Markdown Syntax               | Output                        |
++===============================+===============================+
+| ```                           | *italics* and **bold**        |
+| *italics* and **bold**        |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | superscript^2^ / subscript~2~ |
+| superscript^2^ / subscript~2~ |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | ~~strikethrough~~             |
+| ~~strikethrough~~             |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | `verbatim code`               |
+| `verbatim code`               |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+
+: {tbl-colwidths="\[50,50\]"}
+
+## Headings {.smaller}
+
++-----------------+-----------------+
+| Markdown Syntax | Output          |
++=================+=================+
+| ```             | # Header 1      |
+| # Header 1      |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ## Header 2     |
+| ## Header 2     |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ### Header 3    |
+| ### Header 3    |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | #### Header 4   |
+| #### Header 4   |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ##### Header 5  |
+| ##### Header 5  |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ###### Header 6 |
+| ###### Header 6 |                 |
+| ```             |                 |
++-----------------+-----------------+
+
+: {tbl-colwidths="\[50,50\]"}
+
+## Links {.smaller}
+
+There are several types of "links" or hyperlinks.
+
+::: columns
+::: {.column width="60%"}
+**Markdown**
+
+``` markdown
+You can embed [named hyperlinks](https://quarto.org/),
+direct urls like <https://quarto.org/>, and links to 
+[other places](#quarto-anatomy) in 
+the document. The syntax is similar for embedding an
+inline image: ![Penguins playing with ball](images/penguins-quarto-ball.png).
+```
+:::
+
+::: {.column .fragment width="40%"}
+**Output**
+
+You can embed [named hyperlinks](https://quarto.org/), direct urls like <https://quarto.org/>, and links to [other places](#quarto-anatomy) in the document. The syntax is similar for embedding an inline image: ![Penguins playing with ball](images/penguins-quarto-ball.png){style="width:250px;"}.
+:::
+:::
+
+## Markdown figures
+
+```         
+![Penguins playing with a Quarto ball](images/penguins-quarto-ball.png)
+```
+
+![Penguins playing with a Quarto ball](images/penguins-quarto-ball.png)
+
+## Markdown figures with options
+
+::: columns
+::: {.column width="50%"}
+```         
+![](images/penguins-quarto-ball.png){fig-align="left" width=250}
+```
+
+![](images/penguins-quarto-ball.png){fig-align="left" width=250}
+:::
+
+::: {.column width="50%"}
+```         
+![](images/penguins-quarto-ball.png){fig-align="right" width=250 fig-alt="Illustration of two penguins playing with a Quarto ball."}
+```
+
+![](images/penguins-quarto-ball.png){fig-align="right" width=250 fig-alt="Illustration of two penguins playing with a Quarto ball."}
+:::
+:::
+
+## Lists {.smaller}
+
+Unordered list:
+
+::: columns
+::: {.column width="50%"}
+**Markdown:**
+
+``` markdown
+-   unordered list         
+    -   sub-item 1         
+    -   sub-item 1         
+        -   sub-sub-item 1 
+```
+:::
+
+::: {.column .fragment width="50%" fragment-index="1"}
+**Output**
+
+-   unordered list
+    -   sub-item 1\
+    -   sub-item 1
+        -   sub-sub-item 1
+:::
+:::
+
+Ordered list:
+
+::: columns
+::: {.column width="50%"}
+**Markdown:**
+
+``` markdown
+1. ordered list            
+2. item 2                  
+   i. sub-item 1          
+      A.  sub-sub-item 1
+```
+:::
+
+::: {.column .fragment width="50%" fragment-index="2"}
+**Output**
+
+1.  ordered list\
+2.  item 2
+    i.  sub-item 1
+        A.  sub-sub-item 1
+:::
+:::
+
+## Quotes
+
+**Markdown:**
+
+``` markdown
+> Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. 
+> - Donald Knuth, Literate Programming
+```
+
+. . .
+
+**Output:**
+
+> Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. - Donald Knuth, Literate Programming
+
+::: aside
+"Literate Programming", The Computer Journal 27 (1984), p. 97. (Reprinted in Literate Programming, 1992, p. 99.) Literate Programming (1984)
+:::
+
+## Your turn
+
+::: task
+-   Open `markdown-syntax.qmd` in RStudio.
+-   Follow the instructions in the document for how to modify it.
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 5)
+```
+

@@ -1,0 +1,16 @@
+---
+title: "Wrap-up"
+format: html
+---
+
+## Slides
+
+[View slides in full screen](4-wrap-up.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="4-wrap-up.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
+
+## Exercises
+
+There are no exercises in this module.

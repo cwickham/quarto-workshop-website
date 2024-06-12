@@ -1,0 +1,13 @@
+---
+title: "Documents: Figures/Tables + Code"
+format: html
+---
+
+## Slides
+
+[View slides in full screen](3-figures-tables-code.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="3-figures-tables-code.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
+

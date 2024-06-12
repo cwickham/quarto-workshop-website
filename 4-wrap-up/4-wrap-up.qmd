@@ -1,6 +1,6 @@
 ---
 title: "Wrap-up"
-subtitle: "From R Markdown to Quarto"
+subtitle: "Intro Quarto @ Cascadia R Conf"
 format: revealjs
 ---
 
