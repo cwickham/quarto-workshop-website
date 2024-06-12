@@ -23,53 +23,46 @@ While you wait for the workshop to begin, be sure you've got all the tools neede
 {{< qrcode https://charlotte.quarto.pub/cascadia >}}
 :::
 
-\ 
+ 
 
 ::: {style="font-size: 1.5em"}
-<https://charlotte.quarto.pub/cascadia> 
+<https://charlotte.quarto.pub/cascadia>
 :::
 
 \
 
 ::: task
-
-In addition, please download and open the exercises for this session:
+In addition, please download and open the exercises for this workshop:
 
 ```{r}
 #| eval: false
 #| echo: true
 
-usethis::use_course("")
+usethis::use_course("https://bit.ly/cscd-exercises")
 ```
-
 :::
-
 
 ## Code of Conduct {.smaller}
 
-
 ## About me
 
-::: columns
+:::: columns
 ::: {.column width="50%"}
-
 **Charlotte Wickham**
 
 -   Developer Educator, Posit
 -   R Markdown user for 11+ years\
 -   Quarto user for 2+ years
 :::
-
-:::
+::::
 
 ## About you
 
 ::: task
 Please share:
 
-- Name
-- What do you use R for?
-
+-   Name
+-   What do you use R for?
 :::
 
 ```{r}
@@ -80,74 +73,50 @@ countdown(minutes = 5)
 
 ## Meeting you where you are
 
-::: columns
-::: {.column width="50%"}
+::::::: columns
+:::: {.column width="50%"}
 ::: {.fragment .fade-in-then-semi-out}
 These materials are pitched at someone who:
 
--   knows some R 
+-   knows some R
 
 -   has worked in RStudio
 
 -   wants to learn about Quarto
 :::
-:::
+::::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 ::: {.fragment .fade-in}
 I'll **teach** you
 
--   More Markdown
+-   Quarto Workflow
 
--   New Quarto formats
+-   Components of a Quarto Document
 
--   New Quarto projects
+-   Specific features: markdown, tables, figures, callouts, code blocks
 :::
-:::
-:::
+::::
+:::::::
 
 ## Workshop structure
 
-- My turn: 
+-   My turn:
 
-  - Lecture segments + live coding
-  - Feel free to just watch, take notes, browse docs, or tinker around in RStudio
+    -   Lecture segments + live coding
+    -   Feel free to just watch, take notes, browse docs, or tinker around in RStudio
 
-- Our Turn: 
+-   Our Turn:
 
-  - Live coding + follow along
-  - If problems crop up for you, ask away, but I might ask you to hold on
+    -   Live coding + follow along
+    -   If problems crop up for you, ask away, but I might ask you to hold on
 
-- Your Turn: Practice exercises for you
+-   Your Turn: Practice exercises for you. Use your post-it notes.
 
-## Checking in one more time {.smaller}
+## Checking in one more time {.smaller .scrollable}
 
 ::: task
-
-**1. Software:** Download and install the latest versions of R, RStudio, and Quarto:
-
--   R 4.2.3 or above: <https://cran.r-project.org>
--   RStudio 2023.09.0+448 or above: <https://posit.co/download/rstudio-desktop>
--   Quarto 1.4 or above: <https://quarto.org/docs/get-started>
-
-**2. R Packages:** Install the following packages:
-
-```{r}
-#| eval: false
-
-pkg_list <- c("tidyverse", "gt", "ggthemes", "palmerpenguins", 
-              "quarto", "here", "usethis")
-install.packages(pkg_list)
-```
-
-**3. Exercises:** Download and open the exercises for this session. The easiest way is to run this line of R code at the console in RStudio.
-
-```{r}
-#| eval: false
-
-usethis::use_course("")
-```
-
+{{< include ../_prework-steps.md >}}
 :::
 
 . . .
@@ -199,13 +168,12 @@ Sit back and enjoy!
 ## Your turn
 
 ::: task
-Open `hello-penguins.qmd` in RStudio and . . .
-<!-- Open `hello-penguins.qmd` in RStudio and with the `visual editor` . . . -->
+Open `hello-penguins.qmd` in RStudio and . . . <!-- Open `hello-penguins.qmd` in RStudio and with the `visual editor` . . . -->
 
-1. Render the document.
-2. Update your name and re-render.
-3. Inspect components of the document and make one more update and re-render.
-4. Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
+1.  Render the document.
+2.  Update your name and re-render.
+3.  Inspect components of the document and make one more update and re-render.
+4.  Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
 :::
 
 ```{r}
@@ -224,12 +192,12 @@ Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`
 
 . . .
 
-```{bash}
+```{bash filename="Terminal"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "|1|4|12|17|18"
 
-andrewbray$ quarto --help
+$ quarto --help
 
 Usage:   quarto
 Version: 1.5.23
@@ -265,34 +233,34 @@ Commands:
   help       [command]             - Show this help or the help of a sub-command.      
 ```
 
-## {menu="Quarto Diagram 1"}
+##  {menu="Quarto Diagram 1" data-visibility="hidden"}
 
 ![](images/quarto-workshop-1.jpg)
 
-## {menu="Quarto Diagram 2"}
+##  {menu="Quarto Diagram 2" data-visibility="hidden"}
 
 ![](images/quarto-workshop-2.jpg)
 
-## {menu="Quarto Diagram 3"}
+##  {menu="Quarto Diagram 3" data-visibility="hidden"}
 
 ![](images/quarto-workshop-3.jpg)
 
-## {menu="Quarto Diagram 4"}
+##  {menu="Quarto Diagram 4"}
 
 ![](images/quarto-workshop-4.jpg)
 
-## {menu="Quarto Diagram 5"}
+##  {menu="Quarto Diagram 5"}
 
 ![](images/quarto-workshop-5.jpg)
 
 ## Under the hood
 
 ::: incremental
--   `knitr`, `jupyter`, or `julia engine` evaluates R/Python/Julia code and returns a `.md` file along with the evaluated code
+-   `knitr`, `jupyter`, or `julia` engine evaluates R/Python/Julia code and returns a `.md` file along with the evaluated code
 -   Quarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the `.md` file by Pandoc and converted to a final output format
 :::
 
-## Aside: Lua filters {.smaller}
+## Aside: Lua filters {.smaller data-visibility="hidden"}
 
 -   Here is an example of a Lua filter that converts strong emphasis to small caps, from <https://pandoc.org/lua-filters.html>:
 
@@ -396,53 +364,53 @@ countdown(minutes = 3)
 
 ## Many Quarto formats {.smaller}
 
-+-----------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| Feature         | R Markdown                                                                                           | Quarto                                                                         |
-+=================+======================================================================================================+================================================================================+
-| Basic Formats   | [html_document](https://pkgs.rstudio.com/rmarkdown/reference/html_document.html)                     | [html](https://quarto.org/docs/output-formats/html-basics.html)                |
-|                 |                                                                                                      |                                                                                |
-|                 | [pdf_document](https://pkgs.rstudio.com/rmarkdown/reference/pdf_document.html)                       | [pdf](https://quarto.org/docs/output-formats/pdf-basics.html)                  |
-|                 |                                                                                                      |                                                                                |
-|                 | [word_document](https://pkgs.rstudio.com/rmarkdown/reference/word_document.html)                     | [docx](https://quarto.org/docs/output-formats/ms-word.html)                    |
-+-----------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| Beamer          | [beamer_presentation](https://pkgs.rstudio.com/rmarkdown/reference/beamer_presentation.html)         | [beamer](https://quarto.org/docs/presentations/beamer.html)                    |
-+-----------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| PowerPoint      | [powerpoint_presentation](https://pkgs.rstudio.com/rmarkdown/reference/powerpoint_presentation.html) | [pptx](https://quarto.org/docs/presentations/powerpoint.html)                  |
-+-----------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| HTML Slides     | [xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html)                                       | [revealjs](https://quarto.org/docs/presentations/revealjs/)                    |
-|                 |                                                                                                      |                                                                                |
-|                 | [ioslides](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html)                          |                                                                                |
-|                 |                                                                                                      |                                                                                |
-|                 | [revealjs](https://bookdown.org/yihui/rmarkdown/revealjs.html)                                       |                                                                                |
-+-----------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| Advanced Layout | [tufte](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html)                                    | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html) |
-|                 |                                                                                                      |                                                                                |
-|                 | [distill](https://rstudio.github.io/distill/figures.html)                                            |                                                                                |
-+-----------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
++-----------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| Feature         | Quarto                                                                         | R Markdown                                                                                           |
++=================+================================================================================+======================================================================================================+
+| Basic Formats   | [html](https://quarto.org/docs/output-formats/html-basics.html)                | [html_document](https://pkgs.rstudio.com/rmarkdown/reference/html_document.html)                     |
+|                 |                                                                                |                                                                                                      |
+|                 | [pdf](https://quarto.org/docs/output-formats/pdf-basics.html)                  | [pdf_document](https://pkgs.rstudio.com/rmarkdown/reference/pdf_document.html)                       |
+|                 |                                                                                |                                                                                                      |
+|                 | [docx](https://quarto.org/docs/output-formats/ms-word.html)                    | [word_document](https://pkgs.rstudio.com/rmarkdown/reference/word_document.html)                     |
++-----------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| Beamer          | [beamer](https://quarto.org/docs/presentations/beamer.html)                    | [beamer_presentation](https://pkgs.rstudio.com/rmarkdown/reference/beamer_presentation.html)         |
++-----------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| PowerPoint      | [pptx](https://quarto.org/docs/presentations/powerpoint.html)                  | [powerpoint_presentation](https://pkgs.rstudio.com/rmarkdown/reference/powerpoint_presentation.html) |
++-----------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| HTML Slides     | [revealjs](https://quarto.org/docs/presentations/revealjs/)                    | [xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html)                                       |
+|                 |                                                                                |                                                                                                      |
+|                 |                                                                                | [ioslides](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html)                          |
+|                 |                                                                                |                                                                                                      |
+|                 |                                                                                | [revealjs](https://bookdown.org/yihui/rmarkdown/revealjs.html)                                       |
++-----------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| Advanced Layout | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html) | [tufte](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html)                                    |
+|                 |                                                                                |                                                                                                      |
+|                 |                                                                                | [distill](https://rstudio.github.io/distill/figures.html)                                            |
++-----------------+--------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 
 ## Many Quarto formats {.smaller}
 
-+------------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-| Feature          | R Markdown                                                                   | Quarto                                                                      |
-+==================+==============================================================================+=============================================================================+
-| Cross References | [html_document2](https://bookdown.org/yihui/bookdown/a-single-document.html) | [Quarto Crossrefs](https://quarto.org/docs/authoring/cross-references.html) |
-|                  |                                                                              |                                                                             |
-|                  | [pdf_document2](https://bookdown.org/yihui/bookdown/a-single-document.html)  |                                                                             |
-|                  |                                                                              |                                                                             |
-|                  | [word_document2](https://bookdown.org/yihui/bookdown/a-single-document.html) |                                                                             |
-+------------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-| Websites & Blogs | [blogdown](https://pkgs.rstudio.com/blogdown/)                               | [Quarto Websites](https://quarto.org/docs/websites/)                        |
-|                  |                                                                              |                                                                             |
-|                  | [distill](https://pkgs.rstudio.com/distill/)                                 | [Quarto Blogs](https://quarto.org/docs/websites/website-blog.html)          |
-+------------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-| Books            | [bookdown](https://pkgs.rstudio.com/bookdown/)                               | [Quarto Books](https://quarto.org/docs/books/)                              |
-+------------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-| Interactivity    | [Shiny Documents](https://bookdown.org/yihui/rmarkdown/shiny-documents.html) | [Quarto Interactive Documents](https://quarto.org/docs/interactive/shiny/)  |
-+------------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-| Journal Articles | [rticles](https://pkgs.rstudio.com/rticles/)                                 | [Journal Articles](https://quarto.org/docs/journals/index.html)             |
-+------------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-| Dashboards       | [flexdashboard](https://pkgs.rstudio.com/flexdashboard/)                     | Quarto Dashboards                                                                |
-+------------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
++------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| **Feature**      | **Quarto**                                                                  | **R Markdown**                                                               |
++------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| Cross References | [Quarto Crossrefs](https://quarto.org/docs/authoring/cross-references.html) | [html_document2](https://bookdown.org/yihui/bookdown/a-single-document.html) |
+|                  |                                                                             |                                                                              |
+|                  |                                                                             | [pdf_document2](https://bookdown.org/yihui/bookdown/a-single-document.html)  |
+|                  |                                                                             |                                                                              |
+|                  |                                                                             | [word_document2](https://bookdown.org/yihui/bookdown/a-single-document.html) |
++------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| Websites & Blogs | [Quarto Websites](https://quarto.org/docs/websites/)                        | [blogdown](https://pkgs.rstudio.com/blogdown/)                               |
+|                  |                                                                             |                                                                              |
+|                  | [Quarto Blogs](https://quarto.org/docs/websites/website-blog.html)          | [distill](https://pkgs.rstudio.com/distill/)                                 |
++------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| Books            | [Quarto Books](https://quarto.org/docs/books/)                              | [bookdown](https://pkgs.rstudio.com/bookdown/)                               |
++------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| Interactivity    | [Quarto Interactive Documents](https://quarto.org/docs/interactive/shiny/)  | [Shiny Documents](https://bookdown.org/yihui/rmarkdown/shiny-documents.html) |
++------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| Journal Articles | [Journal Articles](https://quarto.org/docs/journals/index.html)             | [rticles](https://pkgs.rstudio.com/rticles/)                                 |
++------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| Dashboards       | [Quarto Dashboards](https://quarto.org/docs/dashboards/)                    | [flexdashboard](https://pkgs.rstudio.com/flexdashboard/)                     |
++------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
 
 # Wrap up
 
@@ -491,4 +459,3 @@ Use the visual editor for the next steps.
 
 countdown(minutes = 10)
 ```
-

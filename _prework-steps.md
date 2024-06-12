@@ -26,7 +26,7 @@ Download and open the exercises for this session. The easiest way is to run this
 ```{r}
 #| eval: false
 
-usethis::use_course("")
+usethis::use_course("https://bit.ly/cscd-exercises")
 ```
 
-If that doesn't work, you can download a zip file of the exercises [here](https://github.com/quarto-asa/exercises), then open the directory. The qmd files can be opened in RStudio.
+If that doesn't work, you can download a zip file of the exercises [here](https://github.com/cwickham/quarto-workshop-exercises), then open the directory. The qmd files can be opened in RStudio.

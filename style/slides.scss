@@ -92,3 +92,7 @@ details>summary {
   border-left: solid 5px darken($primary-color, 10%);
   background-color: lighten($primary-color, 60%);
 }
+
+div.code-with-filename-file pre{
+  background-color: transparent;
+}
