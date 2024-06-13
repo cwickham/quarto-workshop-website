@@ -5,4 +5,10 @@ format: html
 
 Prior to the workshop, please complete the following steps:
 
+*If you have trouble with these steps, or you'd prefer not to mess with your current set up, you can also work in Posit Cloud. See [Backup Option](#backup-option-posit-cloud) below.*
+
 {{< include _prework-steps.md >}}
+
+## Backup Option: Posit Cloud
+
+You can choose to use Posit Cloud instead which has the required tools already installed, along with a copy of the exercise files. [Join the Posit Cloud](https://posit.cloud/spaces/519059/join?access_code=ckv18LHEcSw3QtQ904uvpzLVlh4L2rk6RhKdpwyp) space and access the Exercises project.

@@ -18,6 +18,8 @@ website:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
   open-graph: true
   sidebar:
+    logo: images/cascadiar_logo_2024.png
+    title: Intro to Quarto
     pinned: true
     align: center
     style: docked
