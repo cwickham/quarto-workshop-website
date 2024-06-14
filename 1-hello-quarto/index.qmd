@@ -11,4 +11,53 @@ format: html
 <iframe class="slide-deck" src="1-hello-quarto.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
+## Demo Outline
 
+These are roughly the steps I'll cover in the "Tour of Quarto":
+
+-   Open the Quarto document called `hello-penguins.qmd`. Opens in Visual Mode.
+
+-   Note the extension `.qmd`: short for Quarto Markdown.
+
+-   Render using "Render" button. Quarto does its magic.
+
+-   Output is `hello-penguins.html`.
+
+-   Switch to Source Editor.
+
+-   Point out Quarto document components in `.qmd` and their counterparts in `.html`:
+
+    -   YAML header surrounded by `---`. Title block in `.html`. 
+    -   Code cells surrounded \````` ``` ```. Code and output in ````.html\`.
+    -   Markdown Text. So far, only headings `##`.
+
+-   Show off some other formats:
+
+    -   `format: pdf`
+
+    -   `format: docx`
+
+    -   `format: revealjs`
+
+-   Show off some features:
+
+    -   **Visual editor:** Bold palmerpenguins and add link to https://allisonhorst.github.io/palmerpenguins/.
+    -   **Control code output:** Add code chunk options:
+        -   `fig-alt`
+
+        -   `echo: false` , then move to YAML header
+
+        -   `code-fold: true` instead
+
+        -   `theme: vapor` under `html`
+
+    -   **Cross reference** a figure:
+
+        -   Add a caption, refer in text
+
+    -   **Add a citation**: 10.1371/journal.pone.0090081
+
+-   If time permits, publish:
+    ```{.bash filename="Terminal"}
+    quarto publish hello-penguins.qmd
+    ```      
