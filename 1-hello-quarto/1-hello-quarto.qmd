@@ -56,6 +56,20 @@ usethis::use_course("https://bit.ly/cscd-exercises")
 :::
 ::::
 
+## Our Teaching Assistants
+
+:::: columns
+
+::: {.column width="50%"}
+**Jadey Ryan**
+:::
+
+::: {.column width="50%"}
+**Lydia Gibson**
+:::
+
+::::
+
 ## About you
 
 ::: task
